@@ -28,8 +28,8 @@ public class CalculatorUI {
     private final JFrame window;
     private JComboBox<String> comboCalculatorType;
     private JComboBox<String> comboTheme;
-    private JTextField inputScreen;
-    private JButton btnC;
+    public JTextField inputScreen;
+    public JButton btnC;
     private JButton btnBack;
     private JButton btnMod;
     private JButton btnDiv;
