@@ -77,6 +77,19 @@ public class CalculatorTest {
 
     @Test
     public void testClear() {
+        calculatorUI = new CalculatorUI();
+        calculatorUI.inputScreen.setText("1");
+        calculatorUI.btnC.doClick();
+        assertEquals("0", calculatorUI.inputScreen.getText());
+
+
+        calculatorUI.inputScreen.setText("-1");
+        calculatorUI.btnC.doClick();
+        assertEquals("0", calculatorUI.inputScreen.getText());
+
+        calculatorUI.inputScreen.setText("NaN");
+        calculatorUI.btnC.doClick();
+        assertEquals("0", calculatorUI.inputScreen.getText());
     }
 
     @Test
