@@ -13,7 +13,14 @@ public class CalculatorTest {
     @Test
     public void testAddition() {
         calculatorUI = new CalculatorUI();
-        assertEquals(8, calculatorUI.calculate(3, 5, '+'));
+        assertEquals(3, calculatorUI.calculate(1,2,'+'));
+        assertEquals(-3, calculatorUI.calculate(-2, -1, '+'));
+        assertEquals(0, calculatorUI.calculate(-2, 2, '+'));
+        assertEquals(2, calculatorUI.calculate(3, -1, '+'));
+        assertEquals(-2, calculatorUI.calculate(-3, 1, '+'));
+        assertEquals(1.1, calculatorUI.calculate(2.2, -1.1, '+'));
+        assertEquals(-1.1, calculatorUI.calculate(-2.2, 1.1, '+'));
+        assertEquals(0, calculatorUI.calculate(1.1, -1.1, '+'));
     }
 
     @Test
