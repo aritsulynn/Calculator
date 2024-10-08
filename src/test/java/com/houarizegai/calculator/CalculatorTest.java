@@ -115,26 +115,28 @@ public class CalculatorTest {
 //       Result is -infinity
 //       Result is NaN
 
-        // Test dividing whole numbers
+        // Test dividing a is positive and b is positive
         assertEquals(2, calculatorUI.calculate(6, 3, '/'));
 
         // Test dividing decimal result
         assertEquals(2.5, calculatorUI.calculate(5, 2, '/'));
 
-        // Test dividing negative numbers
+        // Test dividing a is positive and b is negative
         assertEquals(-2, calculatorUI.calculate(6, -3, '/'));
+
+        // Test dividing b is positive and a is negative
         assertEquals(2, calculatorUI.calculate(-6, -3, '/'));
 
-        // Test dividing zero
+        // Test dividing zero (a=0)
         assertEquals(0, calculatorUI.calculate(0, 5, '/'));
 
-        // Test dividing zero (Positive)
+        // Test dividing zero, result = infinity (a is positive and b is zero)
         assertEquals(Double.POSITIVE_INFINITY, calculatorUI.calculate(1, 0, '/'));
 
-        // Test dividing zero (Negative)
+        // Test dividing zero, result = -infinity (a is negative and b is zero)
         assertEquals(Double.NEGATIVE_INFINITY, calculatorUI.calculate(-1, 0, '/'));
 
-        // Test zero dividing zero
+        // Test zero dividing zero = NaN
         assertEquals(Double.NaN, calculatorUI.calculate(0, 0, '/'));
 
     }
