@@ -57,7 +57,7 @@ public class CalculatorTest {
          * a is first number, b is second number
          * C1: a is greater than 0, equal to 0, less than 0
          * C2: b is greater than 0, equal to 0, less than 0
-         * Select base (a,b)
+         * Select base (greater than 0, greater than 0)
          * t1 a, b are greater than 0
          * t2 a is greater than 0, b is equal to 0
          * t3 a is greater than 0, b is less than 0
