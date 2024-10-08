@@ -236,6 +236,7 @@ To test the power operation in the calculator by verifying that it correctly han
 ## 🧹 testClear()
 
 ### Goal of test case:
+To ensure that the clear button correctly resets all relevant fields.
 
 ### Input Domain Modelling
 - **Identify Testable Functions**: 
