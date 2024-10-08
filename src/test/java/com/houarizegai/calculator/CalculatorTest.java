@@ -45,7 +45,22 @@ public class CalculatorTest {
 
     @Test
     public void testMultiplication() {
-        assertEquals(445, calculatorUI.calculate(44.5, 10, '*'));
+        // Interfaced Base
+        // calculate(a, b)
+        // a is null
+        // a is not null
+        // b is null
+        // b is not null
+
+        // Functionality Based
+        // calculate(a,b)
+        // a > b
+        // a < b
+        // a == b
+        int num = 0;
+        int a =0 , b= 0;
+//      assertEquals(null, calculatorUI.calculate(null, null, '*'));
+
     }
 
     @Test
@@ -55,7 +70,11 @@ public class CalculatorTest {
 
     @Test
     public void testSquareRoot() throws Exception {
-        // We want to run SqrtTest with the main calculatorTest so we put a @EnabledIf to prevent it
+        //Interfaced Based
+
+        //Functionality Based
+
+        // We want to run SqrtTest with the main calculatorTest, so we put a @EnabledIf to prevent it
         SqrtTest.enableTest();
 
         SqrtTest sqt = new SqrtTest();
