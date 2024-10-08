@@ -22,6 +22,10 @@ public class CalculatorTest {
         calculatorUI = new CalculatorUI();
     }
 
+    /*
+     * Copyright (C) 2024 Sirasit Puangpathanachai - All Rights Reserved
+     * You may use, distribute and modify this code under the terms of the MIT license. 
+     */
     @Test
     public void testAddition() {
         assertEquals(5, calculatorUI.calculate(2,3,'+'));
@@ -107,6 +111,10 @@ public class CalculatorTest {
         sqt.testSquareRootPositiveInput();
     }
 
+    /*
+     * Copyright (C) 2024 Sirasit Puangpathanachai - All Rights Reserved
+     * You may use, distribute and modify this code under the terms of the MIT license. 
+     */
     @Test
     public void testPower() {
         assertEquals(8, calculatorUI.calculate(2,3,'^'));

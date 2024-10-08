@@ -101,7 +101,7 @@ To test the addition operation in the calculator by verifying that it correctly 
     |--------------------|---|---|---|
     | T1 (>0, >0) | 2 | 3 | 5 |
     | T2 (0, 0) | 0 | 0 | 0 |
-    | T2 (<0, <0) | -2 | -3 | -5 |
+    | T3 (<0, <0) | -2 | -3 | -5 |
 
 
 ## testPower()
