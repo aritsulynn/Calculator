@@ -2,6 +2,7 @@ package com.houarizegai.calculator;
 
 import com.houarizegai.calculator.ui.CalculatorUI;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.condition.EnabledIf;
@@ -76,8 +77,8 @@ public class SqrtTest {
         shouldRunTests = true;
     }
 
-    @BeforeAll
-    public static void setup(){
+    @BeforeEach
+    public void setup(){
         calculatorUI = new CalculatorUI();
     }
 
@@ -85,7 +86,7 @@ public class SqrtTest {
     @EnabledIf("isTestEnabled")
     public void testSquareRootPositiveInput() throws Exception {
         // Set input value
-        calculatorUI.inputScreen.setText("9"); // Set the input to 9
+        calculatorUI.inputScreen.setText("49"); // Set the input to 9
 
         // Use reflection to access the private btnRoot field
         Field btnRootField = CalculatorUI.class.getDeclaredField("btnRoot");
@@ -100,14 +101,14 @@ public class SqrtTest {
         btnRootListener.actionPerformed(null);
 
         // Check the result
-        assertEquals("3", calculatorUI.inputScreen.getText());
+        assertEquals("7", calculatorUI.inputScreen.getText());
     }
 
     @Test
     @EnabledIf("isTestEnabled")
     public void testSquareRootNegativeInput() throws Exception{
         // Set input value to a negative number
-        calculatorUI.inputScreen.setText("-9"); // Set the input to -9
+        calculatorUI.inputScreen.setText("-81"); // Set the input to -9
 
         // Use reflection to access the private btnRoot field
         Field btnRootField = CalculatorUI.class.getDeclaredField("btnRoot");

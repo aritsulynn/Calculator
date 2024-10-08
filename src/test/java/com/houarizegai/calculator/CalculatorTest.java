@@ -16,9 +16,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class CalculatorTest {
     private static CalculatorUI calculatorUI;
 
-    // So we don't have to repeatedly call `calculatorUI = new CalculatorUI()` everytime.
+
+    /*
+     * Copyright (C) 2024 Purinat Pattanakeaw - All Rights Reserved
+     * You may use, distribute and modify this code under the terms of the MIT license.
+     */
     @BeforeAll
     public static void setUp(){
+        // So we don't have to repeatedly call `calculatorUI = new CalculatorUI()` everytime.
         calculatorUI = new CalculatorUI();
     }
 
@@ -71,6 +76,10 @@ public class CalculatorTest {
         assertEquals(-2, calculatorUI.calculate(-1, 1, '-')); // t5
     }
 
+    /*
+     * Copyright (C) 2024 Purinat Pattanakeaw - All Rights Reserved
+     * You may use, distribute and modify this code under the terms of the MIT license.
+     */
     @Test
     public void testMultiplication() {
         // Interfaced Base
@@ -142,21 +151,37 @@ public class CalculatorTest {
     }
 
 
+    /*
+     * Copyright (C) 2024 Purinat Pattanakeaw - All Rights Reserved
+     * You may use, distribute and modify this code under the terms of the MIT license.
+     */
     @Test
     public void testSquareRoot() throws Exception {
-        //Interfaced Based
+        // Interfaced Based
 
-        //Functionality Based
+        // Null Input null
+        // Empty Input ""
+        // Not a Number input "Hello World"
+        // Negative Number Input "-81"
+        // Zero Input "0"
+        // Positive Number Input "49"
+
+        // Functionality Based
+
+        // Positive SQRT (3)
+        // 0 SQRT (0)
+        // Negative SQRT (NaN)
 
         // We want to run SqrtTest with the main calculatorTest, so we put a @EnabledIf to prevent it
+        SqrtTest sqt = new SqrtTest();
+        sqt.setup();
         SqrtTest.enableTest();
 
-        SqrtTest sqt = new SqrtTest();
+        sqt.testSquareRootZeroInput();
         sqt.testSquareRootNull();
         sqt.testSquareRootNoInput();
         sqt.testSquareRootNotANumber();
         sqt.testSquareRootNegativeInput();
-        sqt.testSquareRootZeroInput();
         sqt.testSquareRootPositiveInput();
     }
 
