@@ -48,7 +48,7 @@ public class CalculatorTest {
         assertEquals(0, calculatorUI.calculate(0, 0, '-'));
 
         /*
-         * Interface-Based Characteristics test cases
+         * Interface-Based Characteristics test cases: BCC (Base Choice Coverage)
          * a is first number, b is second number
          * base (a,b) are greater than 0
          * t1 a, b are greater than 0
