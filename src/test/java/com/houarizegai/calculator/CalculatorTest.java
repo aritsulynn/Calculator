@@ -43,9 +43,10 @@ public class CalculatorTest {
 
         /*
          * Functionality-Based Characteristics test cases
-         * t1 result is positive
-         * t2 result is negative
-         * t3 result is zero
+         * C1: result is greater than 0, less than 0, equal to 0
+         * t1 result is greater than 0
+         * t2 result is less than 0
+         * t3 result is 0
          */
         assertEquals(5, calculatorUI.calculate(2, -3, '-'));
         assertEquals(-5, calculatorUI.calculate(-2, 3, '-'));
@@ -148,6 +149,7 @@ public class CalculatorTest {
 
         /*
          * Functionality-Based Characteristics test cases
+         * C1: Button C is on the screen or not (True, False)
          * t1 have button C on the screen
          * t2 doesn't have button C on the screen
          */
