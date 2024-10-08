@@ -54,7 +54,9 @@ public class CalculatorTest {
         /*
          * Interface-Based Characteristics test cases: BCC (Base Choice Coverage)
          * a is first number, b is second number
-         * base (a,b) are greater than 0
+         * C1: a is greater than 0, equal to 0, less than 0
+         * C2: b is greater than 0, equal to 0, less than 0
+         * Select base (a,b)
          * t1 a, b are greater than 0
          * t2 a is greater than 0, b is equal to 0
          * t3 a is greater than 0, b is less than 0
@@ -143,26 +145,51 @@ public class CalculatorTest {
      */
     @Test
     public void testClear() {
-        calculatorUI.inputScreen.setText("1");
-        calculatorUI.btnC.doClick();
-        assertEquals("0", calculatorUI.inputScreen.getText());
 
+        /*
+         * Functionality-Based Characteristics test cases
+         * t1 have button C on the screen
+         * t2 doesn't have button C on the screen
+         */
+        assertTrue(calculatorUI.btnC != null); // t1
 
-        calculatorUI.inputScreen.setText("-1");
-        calculatorUI.btnC.doClick();
-        assertEquals("0", calculatorUI.inputScreen.getText());
+        /*
+         * Interface-Based Characteristics test cases: BCC (Base Choice Coverage)
+         * C1: Button C is on the screen or not
+         * C2: Value on the screen is NaN, equal to 0, greater than 0, less than 0
+         * t1: Value on the screen is NaN
+         * t2: Value on the screen is equal to 0
+         * t3: Value on the screen is greater than 0
+         * t4: Value on the screen is less than 0
+         * t5: Button C is not on the screen
+         */
 
         calculatorUI.inputScreen.setText("NaN");
-        calculatorUI.btnC.doClick();
-        assertEquals("0", calculatorUI.inputScreen.getText());
-
-        calculatorUI.inputScreen.setText("");
         calculatorUI.btnC.doClick();
         assertEquals("0", calculatorUI.inputScreen.getText());
 
         calculatorUI.inputScreen.setText("0");
         calculatorUI.btnC.doClick();
         assertEquals("0", calculatorUI.inputScreen.getText());
+
+        calculatorUI.inputScreen.setText("1");
+        calculatorUI.btnC.doClick();
+        assertEquals("0", calculatorUI.inputScreen.getText());
+
+        calculatorUI.inputScreen.setText("-1");
+        calculatorUI.btnC.doClick();
+        assertEquals("0", calculatorUI.inputScreen.getText());
+        
+        // remove button C
+        calculatorUI.btnC = null;
+        assertTrue(calculatorUI.btnC == null); // Functionality-Based t2
+        
+        calculatorUI.inputScreen.setText("NaN"); // Interface-Based t5
+        if(calculatorUI.btnC != null) {
+            calculatorUI.btnC.doClick();
+            assertEquals("0", calculatorUI.inputScreen.getText());
+        }
+        assertEquals("NaN", calculatorUI.inputScreen.getText());
     }
 
     @Test
