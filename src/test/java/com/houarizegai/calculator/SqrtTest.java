@@ -3,22 +3,18 @@ package com.houarizegai.calculator;
 import com.houarizegai.calculator.ui.CalculatorUI;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.condition.EnabledIf;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.lang.reflect.Field;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 // I made this class separately because there's setup needed to be done
 // And Mockito (Mocking module)
 // https://www.vogella.com/tutorials/Mockito/article.html
 // https://stackoverflow.com/questions/38747779/mockito-what-is-it-and-how-is-it-different-from-junit
 // For mocking UI unit testing
-
-import static org.mockito.Mockito.*;
 
 // What is reflection and private variable
 /*
@@ -74,6 +70,11 @@ public class ReflectionExample {
 
 public class SqrtTest {
     private static CalculatorUI calculatorUI;
+    private static boolean shouldRunTests = false;
+
+    public static void enableTest(){
+        shouldRunTests = true;
+    }
 
     @BeforeAll
     public static void setup(){
@@ -81,7 +82,8 @@ public class SqrtTest {
     }
 
     @Test
-    public void testSquareRoot() throws Exception {
+    @EnabledIf("isTestEnabled")
+    public void testSquareRootPositiveInput() throws Exception {
         // Set input value
         calculatorUI.inputScreen.setText("9"); // Set the input to 9
 
@@ -99,5 +101,121 @@ public class SqrtTest {
 
         // Check the result
         assertEquals("3", calculatorUI.inputScreen.getText());
+    }
+
+    @Test
+    @EnabledIf("isTestEnabled")
+    public void testSquareRootNegativeInput() throws Exception{
+        // Set input value to a negative number
+        calculatorUI.inputScreen.setText("-9"); // Set the input to -9
+
+        // Use reflection to access the private btnRoot field
+        Field btnRootField = CalculatorUI.class.getDeclaredField("btnRoot");
+        btnRootField.setAccessible(true); // Make it accessible
+        JButton btnRoot = (JButton) btnRootField.get(calculatorUI);
+
+        // Retrieve the action listener from the button
+        ActionListener[] listeners = btnRoot.getActionListeners();
+        ActionListener btnRootListener = listeners[0];
+
+        // Simulate button click
+        btnRootListener.actionPerformed(null);
+
+        // Check the result
+        assertEquals("NaN", calculatorUI.inputScreen.getText());
+    }
+
+    @Test
+    @EnabledIf("isTestEnabled")
+    public void testSquareRootZeroInput() throws Exception{
+        // Set input value to a negative number
+        calculatorUI.inputScreen.setText("0"); // Set the input to 0
+
+        // Use reflection to access the private btnRoot field
+        Field btnRootField = CalculatorUI.class.getDeclaredField("btnRoot");
+        btnRootField.setAccessible(true); // Make it accessible
+        JButton btnRoot = (JButton) btnRootField.get(calculatorUI);
+
+        // Retrieve the action listener from the button
+        ActionListener[] listeners = btnRoot.getActionListeners();
+        ActionListener btnRootListener = listeners[0];
+
+        // Simulate button click
+        btnRootListener.actionPerformed(null);
+
+        // Check the result
+        assertEquals("0", calculatorUI.inputScreen.getText());
+    }
+
+    @Test
+    @EnabledIf("isTestEnabled")
+    public void testSquareRootNotANumber() throws Exception{
+        String inputText = "Hello World";
+        calculatorUI.inputScreen.setText(inputText);
+
+        // Use reflection to access the private btnRoot field
+        Field btnRootField = CalculatorUI.class.getDeclaredField("btnRoot");
+        btnRootField.setAccessible(true); // Make it accessible
+        JButton btnRoot = (JButton) btnRootField.get(calculatorUI);
+
+        // Retrieve the action listener from the button
+        ActionListener[] listeners = btnRoot.getActionListeners();
+        ActionListener btnRootListener = listeners[0];
+
+        // Simulate button click
+        btnRootListener.actionPerformed(null);
+
+        // Check the result
+        assertEquals(inputText, calculatorUI.inputScreen.getText());
+
+        // The code doesn't have a logic to deal with anything non-numeral, so the result is just the input
+    }
+
+    @Test
+    @EnabledIf("isTestEnabled")
+    public void testSquareRootNull() throws Exception{
+        // Set input value to a negative number
+        calculatorUI.inputScreen.setText(null); // Set the input to 0
+
+        // Use reflection to access the private btnRoot field
+        Field btnRootField = CalculatorUI.class.getDeclaredField("btnRoot");
+        btnRootField.setAccessible(true); // Make it accessible
+        JButton btnRoot = (JButton) btnRootField.get(calculatorUI);
+
+        // Retrieve the action listener from the button
+        ActionListener[] listeners = btnRoot.getActionListeners();
+        ActionListener btnRootListener = listeners[0];
+
+        // Simulate button click
+        btnRootListener.actionPerformed(null);
+
+        // Check the result
+        assertNull(null, calculatorUI.inputScreen.getText());
+    }
+
+    @Test
+    @EnabledIf("isTestEnabled")
+    public void testSquareRootNoInput() throws Exception{
+        // Set input value to a negative number
+        calculatorUI.inputScreen.setText(""); // Set the input to 0
+
+        // Use reflection to access the private btnRoot field
+        Field btnRootField = CalculatorUI.class.getDeclaredField("btnRoot");
+        btnRootField.setAccessible(true); // Make it accessible
+        JButton btnRoot = (JButton) btnRootField.get(calculatorUI);
+
+        // Retrieve the action listener from the button
+        ActionListener[] listeners = btnRoot.getActionListeners();
+        ActionListener btnRootListener = listeners[0];
+
+        // Simulate button click
+        btnRootListener.actionPerformed(null);
+
+        // Check the result
+        assertEquals("", calculatorUI.inputScreen.getText());
+    }
+
+    public static boolean isTestEnabled() {
+        return shouldRunTests;
     }
 }

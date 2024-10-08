@@ -1,6 +1,7 @@
 package com.houarizegai.calculator;
 
 import com.houarizegai.calculator.ui.CalculatorUI;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,11 +23,16 @@ Equals Functionality (=) บลู @หนูบลูเองง
 */
 
 public class CalculatorTest {
-    private CalculatorUI calculatorUI;
+    private static CalculatorUI calculatorUI;
+
+    // So we don't have to repeatedly call `calculatorUI = new CalculatorUI()` everytime.
+    @BeforeAll
+    public static void setUp(){
+        calculatorUI = new CalculatorUI();
+    }
 
     @Test
     public void testAddition() {
-        calculatorUI = new CalculatorUI();
         assertEquals(5, calculatorUI.calculate(2,3,'+'));
         assertEquals(-5, calculatorUI.calculate(-2, -3, '+'));
         assertEquals(0, calculatorUI.calculate(0, 0, '+'));
@@ -34,29 +40,35 @@ public class CalculatorTest {
 
     @Test
     public void testSubtraction() {
-        calculatorUI = new CalculatorUI();
         assertEquals(-6, calculatorUI.calculate(2, 8, '-'));
     }
 
     @Test
     public void testMultiplication() {
-        calculatorUI = new CalculatorUI();
         assertEquals(445, calculatorUI.calculate(44.5, 10, '*'));
     }
 
     @Test
     public void testDivision() {
-        calculatorUI = new CalculatorUI();
         assertEquals(64, calculatorUI.calculate(320, 5, '/'));
     }
 
     @Test
-    public void testSquareRoot() {
+    public void testSquareRoot() throws Exception {
+        // We want to run SqrtTest with the main calculatorTest so we put a @EnabledIf to prevent it
+        SqrtTest.enableTest();
+
+        SqrtTest sqt = new SqrtTest();
+        sqt.testSquareRootNull();
+        sqt.testSquareRootNoInput();
+        sqt.testSquareRootNotANumber();
+        sqt.testSquareRootNegativeInput();
+        sqt.testSquareRootZeroInput();
+        sqt.testSquareRootPositiveInput();
     }
 
     @Test
     public void testPower() {
-        calculatorUI = new CalculatorUI();
         assertEquals(8, calculatorUI.calculate(2,3,'^'));
         assertEquals(1, calculatorUI.calculate(2, 0, '^'));
         assertEquals(0, calculatorUI.calculate(0, 3, '^'));
@@ -78,7 +90,6 @@ public class CalculatorTest {
 
     @Test
     public void testClear() {
-        calculatorUI = new CalculatorUI();
         calculatorUI.inputScreen.setText("1");
         calculatorUI.btnC.doClick();
         assertEquals("0", calculatorUI.inputScreen.getText());
