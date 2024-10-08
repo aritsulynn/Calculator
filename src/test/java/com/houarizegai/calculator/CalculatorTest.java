@@ -371,7 +371,57 @@ a == 0:
 
     @Test
     public void testDecimal() {
+//        a is the text showing on the screen
+
+//        Interface Base
+//        a is zero
+//        a is positive integer
+//        a is positive integer
+//        a is positive decimal
+//        a is negative decimal
+//        a is not a number
+
+
+//        Functionality Base
+//        Result is 'a' + '.' (No change)
+//        Result is a (Appending a decimal point)
+//
+//
+//
+//
+
+        // Input 0
+        calculatorUI.inputScreen.setText("0");
+        calculatorUI.btnPoint.doClick();
+        assertEquals("0.", calculatorUI.inputScreen.getText());
+
+        // Input positive integer
+        calculatorUI.inputScreen.setText("5");
+        calculatorUI.btnPoint.doClick();
+        assertEquals("5.", calculatorUI.inputScreen.getText());
+
+        // Input negative integer
+        calculatorUI.inputScreen.setText("-3");
+        calculatorUI.btnPoint.doClick();
+        assertEquals("-3.", calculatorUI.inputScreen.getText());
+
+        // Input positive decimal
+        calculatorUI.inputScreen.setText("3.14");
+        calculatorUI.btnPoint.doClick();
+        assertEquals("3.14", calculatorUI.inputScreen.getText());
+
+        // Input negative decimal
+        calculatorUI.inputScreen.setText("-5.2");
+        calculatorUI.btnPoint.doClick();
+        assertEquals("-5.2", calculatorUI.inputScreen.getText());
+
+        // Input is not a number
+        calculatorUI.inputScreen.setText("Infinity");
+        calculatorUI.btnPoint.doClick();
+        assertEquals("Infinity.", calculatorUI.inputScreen.getText());
+
     }
+
 
     @Test
     public void testEquals() {
