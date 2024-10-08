@@ -91,10 +91,36 @@ public class CalculatorTest {
 
     }
 
+    /*
+     * Copyright (C) 2024 Pattaradnai Kaeodumkoeng - All Rights Reserved
+     * You may use, distribute and modify this code under the terms of the MIT license.
+     */
     @Test
     public void testDivision() {
-        assertEquals(64, calculatorUI.calculate(320, 5, '/'));
+        // Test dividing whole numbers
+        assertEquals(2, calculatorUI.calculate(6, 3, '/'));
+
+        // Test dividing decimal result
+        assertEquals(2.5, calculatorUI.calculate(5, 2, '/'));
+
+        // Test dividing negative numbers
+        assertEquals(-2, calculatorUI.calculate(6, -3, '/'));
+        assertEquals(2, calculatorUI.calculate(-6, -3, '/'));
+
+        // Test dividing zero
+        assertEquals(0, calculatorUI.calculate(0, 5, '/'));
+
+        // Test dividing zero (Positive)
+        assertEquals(Double.POSITIVE_INFINITY, calculatorUI.calculate(1, 0, '/'));
+
+        // Test dividing zero (Negative)
+        assertEquals(Double.NEGATIVE_INFINITY, calculatorUI.calculate(-1, 0, '/'));
+
+        // Test zero dividing zero
+        assertEquals(Double.NaN, calculatorUI.calculate(0, 0, '/'));
+
     }
+
 
     @Test
     public void testSquareRoot() throws Exception {
