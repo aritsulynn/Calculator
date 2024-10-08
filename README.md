@@ -243,7 +243,7 @@ To ensure that the clear button correctly resets all relevant fields.
   - `calculate()`
 
 - **Identify Parameters, Return Types, Return Values, and Exceptional Behavior**:
-  - **Parameters**: Value on the input screen
+  - **Parameters**: Value on the screen
   - **Return Type**: `double`
   - **Return Value**: 0
   - **Exceptional Behavior**: None
@@ -256,7 +256,7 @@ To ensure that the clear button correctly resets all relevant fields.
     
       | **Characteristic**           | **b1**               | **b2**             | **b3**             | **b4**             |
       |------------------------------|----------------------|--------------------|--------------------|--------------------|
-      | C1 = *value on the screem*   | NaN                  | equal to 0         | greater than 0     | less than 0        |
+      | C1 = *value on the screen*   | NaN                  | equal to 0         | greater than 0     | less than 0        |
 
     - **Functionality-Based Characteristics**:
     
@@ -270,7 +270,7 @@ To ensure that the clear button correctly resets all relevant fields.
     
       | **Characteristic**           | **b1**               | **b2**             | **b3**             | **b4**             |
       |------------------------------|----------------------|--------------------|--------------------|--------------------|
-      | C1 = *value on the screem*   | NaN                  | 0                  | 1                  | -1                 |
+      | C1 = *value on the screen*   | NaN                  | 0                  | 1                  | -1                 |
 
     - **Functionality-Based Characteristics**:
     
@@ -286,7 +286,7 @@ To ensure that the clear button correctly resets all relevant fields.
       | **Characteristic**           | **b1**               | **b2**             | **b3**             | **b4**             |
       |------------------------------|----------------------|--------------------|--------------------|--------------------|
       | C1 = *Is Button visible*     | True                 | False              |                    |                    |
-      | C2 = *value on the screem*   | NaN                  | equal to 0         | greater than 0     | less than 0        |
+      | C2 = *value on the screen*   | NaN                  | equal to 0         | greater than 0     | less than 0        |
      
     `Base Choice Coverage (BCC)` select (True, NaN) for base
     | **Test**           | **Value on Screen** | **Expected result** |
