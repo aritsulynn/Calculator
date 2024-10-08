@@ -83,20 +83,124 @@ public class CalculatorTest {
     @Test
     public void testMultiplication() {
         // Interfaced Base
-        // calculate(a, b)
-        // a is null
-        // a is not null
-        // b is null
-        // b is not null
+        // a < 0
+        // a > 0
+        // a == 0
+
+        // b < 0
+        // b > 0
+        // b == 0
 
         // Functionality Based
-        // calculate(a,b)
         // a > b
         // a < b
         // a == b
-        int num = 0;
-        int a =0 , b= 0;
-//      assertEquals(null, calculatorUI.calculate(null, null, '*'));
+
+        /*
+a < 0:
+
+    a < 0 and b < 0 with a > b
+    a < 0 and b < 0 with a < b
+    a < 0 and b < 0 with a == b
+    a < 0 and b > 0 with a > b
+    a < 0 and b > 0 with a < b
+    a < 0 and b > 0 with a == b
+    a < 0 and b == 0 with a > b
+    a < 0 and b == 0 with a < b
+    a < 0 and b == 0 with a == b
+
+a > 0:
+
+    a > 0 and b < 0 with a > b
+    a > 0 and b < 0 with a < b
+    a > 0 and b < 0 with a == b
+    a > 0 and b > 0 with a > b
+    a > 0 and b > 0 with a < b
+    a > 0 and b > 0 with a == b
+    a > 0 and b == 0 with a > b
+    a > 0 and b == 0 with a < b
+    a > 0 and b == 0 with a == b
+
+a == 0:
+
+    a == 0 and b < 0 with a > b
+    a == 0 and b < 0 with a < b
+    a == 0 and b < 0 with a == b
+    a == 0 and b > 0 with a > b
+    a == 0 and b > 0 with a < b
+    a == 0 and b > 0 with a == b
+    a == 0 and b == 0 with a > b
+    a == 0 and b == 0 with a < b
+    a == 0 and b == 0 with a == b
+    */
+
+        char operand = '*';
+        // a < 0
+        double a = -4;
+        /*
+            a < 0 and b < 0 with a > b
+            a < 0 and b < 0 with a < b
+            a < 0 and b < 0 with a == b
+         */
+        assertEquals(40, calculatorUI.calculate(a, -10, operand));
+        assertEquals(4, calculatorUI.calculate(a, -1, operand));
+        assertEquals(16, calculatorUI.calculate(a, a, operand));
+        /*
+        a < 0 and b > 0 with a > b Impossible
+        a < 0 and b > 0 with a < b
+        a < 0 and b > 0 with a == b Impossible
+         */
+        assertEquals(-40, calculatorUI.calculate(a, 10, operand));
+        /*
+            a < 0 and b == 0 with a > b Impossible
+            a < 0 and b == 0 with a < b
+            a < 0 and b == 0 with a == b Impossible
+         */
+        assertEquals(-0.0, calculatorUI.calculate(a, 0, operand));
+
+        // a > 0
+        a = 5;
+        /*
+            a > 0 and b < 0 with a > b
+            a > 0 and b < 0 with a < b Impossible
+            a > 0 and b < 0 with a == b Impossible
+         */
+        assertEquals(-5, calculatorUI.calculate(a, -1, operand));
+        /*
+            a > 0 and b > 0 with a > b
+            a > 0 and b > 0 with a < b
+            a > 0 and b > 0 with a == b
+         */
+        assertEquals(20, calculatorUI.calculate(a, 4, operand));
+        assertEquals(50, calculatorUI.calculate(a, 10, operand));
+        assertEquals(25, calculatorUI.calculate(a, a, operand));
+        /*
+            a > 0 and b == 0 with a > b
+            a > 0 and b == 0 with a < b Impossible
+            a > 0 and b == 0 with a == b Impossible
+         */
+        assertEquals(0.0, calculatorUI.calculate(a, 0, operand));
+
+        // a == 0
+        a = 0.0;
+        /*
+            a == 0 and b < 0 with a > b
+            a == 0 and b < 0 with a < b Impossible
+            a == 0 and b < 0 with a == b Impossible
+         */
+        assertEquals(-0.0, calculatorUI.calculate(a, -1, operand));
+        /*
+            a == 0 and b > 0 with a > b Impossible
+            a == 0 and b > 0 with a < b
+            a == 0 and b > 0 with a == b Impossible
+         */
+        assertEquals(0.0, calculatorUI.calculate(a, 145, operand));
+        /*
+            a == 0 and b == 0 with a > b Impossible
+            a == 0 and b == 0 with a < b Impossible
+            a == 0 and b == 0 with a == b
+         */
+        assertEquals(0.0, calculatorUI.calculate(a, a, operand));
 
     }
 
