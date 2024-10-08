@@ -8,20 +8,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /*
-Addition Functionality (+) ฮิม @Hyme 
-Subtraction Functionality (-) เป้ @Lynn 
-Multiplication Functionality () บู้ @B 
-Division Functionality (/) กาแฟ @Kafair 
-Square Root Functionality (√) บู้ @B 
-Power Functionality (pow) ฮิม @Hyme 
-Natural Logarithm Functionality (ln) พัด @patchyy 
-Modulo Functionality (%) พัด @patchyy 
-Backspace Functionality (<-) บลู @หนูบลูเองง 
-Clear Functionality (C) เป้ @Lynn 
-Decimal Functionality (.) กาแฟ @Kafair 
-Equals Functionality (=) บลู @หนูบลูเองง 
-*/
-
+ * Copyright (C) 2024 Thanawat Jarusuthirug, Sirasit Puangpathanachai,
+ *  Sarttra Prasongtichol, Pattaradnai Kaeodumkoeng, Pattaravit Suksri,
+ *  Purinat Pattanakeaw - All Rights Reserved
+ * You may use, distribute and modify this code under the terms of the MIT license. 
+ */
 public class CalculatorTest {
     private static CalculatorUI calculatorUI;
 
@@ -38,9 +29,39 @@ public class CalculatorTest {
         assertEquals(0, calculatorUI.calculate(0, 0, '+'));
     }
 
+
+    /*
+     * Copyright (C) 2024 Thanawat Jarusuthirug - All Rights Reserved
+     * You may use, distribute and modify this code under the terms of the MIT license. 
+     */
     @Test
     public void testSubtraction() {
-        assertEquals(-6, calculatorUI.calculate(2, 8, '-'));
+
+        /*
+         * Functionality-Based Characteristics test cases
+         * t1 result is positive
+         * t2 result is negative
+         * t3 result is zero
+         */
+        assertEquals(5, calculatorUI.calculate(2, -3, '-'));
+        assertEquals(-5, calculatorUI.calculate(-2, 3, '-'));
+        assertEquals(0, calculatorUI.calculate(0, 0, '-'));
+
+        /*
+         * Interface-Based Characteristics test cases
+         * a is first number, b is second number
+         * base (a,b) are greater than 0
+         * t1 a, b are greater than 0
+         * t2 a is greater than 0, b is equal to 0
+         * t3 a is greater than 0, b is less than 0
+         * t4 a is equal to 0, b is greater than 0
+         * t5 a is less than 0, b is greater than 0
+         */
+        assertEquals(0, calculatorUI.calculate(1, 1, '-')); // t1
+        assertEquals(1, calculatorUI.calculate(1, 0, '-')); // t2
+        assertEquals(2, calculatorUI.calculate(1, -1, '-')); // t3
+        assertEquals(-1, calculatorUI.calculate(0, 1, '-')); // t4
+        assertEquals(-2, calculatorUI.calculate(-1, 1, '-')); // t5
     }
 
     @Test
@@ -107,6 +128,11 @@ public class CalculatorTest {
     public void testBackspace() {
     }
 
+
+    /*
+     * Copyright (C) 2024 Thanawat Jarusuthirug - All Rights Reserved
+     * You may use, distribute and modify this code under the terms of the MIT license. 
+     */
     @Test
     public void testClear() {
         calculatorUI.inputScreen.setText("1");
@@ -119,6 +145,14 @@ public class CalculatorTest {
         assertEquals("0", calculatorUI.inputScreen.getText());
 
         calculatorUI.inputScreen.setText("NaN");
+        calculatorUI.btnC.doClick();
+        assertEquals("0", calculatorUI.inputScreen.getText());
+
+        calculatorUI.inputScreen.setText("");
+        calculatorUI.btnC.doClick();
+        assertEquals("0", calculatorUI.inputScreen.getText());
+
+        calculatorUI.inputScreen.setText("0");
         calculatorUI.btnC.doClick();
         assertEquals("0", calculatorUI.inputScreen.getText());
     }
