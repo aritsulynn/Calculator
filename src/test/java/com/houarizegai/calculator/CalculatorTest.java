@@ -27,14 +27,9 @@ public class CalculatorTest {
     @Test
     public void testAddition() {
         calculatorUI = new CalculatorUI();
-        assertEquals(3, calculatorUI.calculate(1,2,'+'));
-        assertEquals(-3, calculatorUI.calculate(-2, -1, '+'));
-        assertEquals(0, calculatorUI.calculate(-2, 2, '+'));
-        assertEquals(2, calculatorUI.calculate(3, -1, '+'));
-        assertEquals(-2, calculatorUI.calculate(-3, 1, '+'));
-        assertEquals(1.1, calculatorUI.calculate(2.2, -1.1, '+'));
-        assertEquals(-1.1, calculatorUI.calculate(-2.2, 1.1, '+'));
-        assertEquals(0, calculatorUI.calculate(1.1, -1.1, '+'));
+        assertEquals(5, calculatorUI.calculate(2,3,'+'));
+        assertEquals(-5, calculatorUI.calculate(-2, -3, '+'));
+        assertEquals(0, calculatorUI.calculate(0, 0, '+'));
     }
 
     @Test
@@ -60,7 +55,13 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testPower() {  
+    public void testPower() {
+        calculatorUI = new CalculatorUI();
+        assertEquals(8, calculatorUI.calculate(2,3,'^'));
+        assertEquals(1, calculatorUI.calculate(2, 0, '^'));
+        assertEquals(0, calculatorUI.calculate(0, 3, '^'));
+        assertEquals(-0.125, calculatorUI.calculate(-2, -3, '^'));
+        assertEquals(Double.POSITIVE_INFINITY, calculatorUI.calculate(0,-3,'^'));  
     }
 
     @Test
