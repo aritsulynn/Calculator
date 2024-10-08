@@ -97,6 +97,24 @@ public class CalculatorTest {
      */
     @Test
     public void testDivision() {
+
+//       Interface Base
+//       calculate (a,b)
+//       a is positive
+//       a is negative
+//       a is zero
+//       b is positive
+//       b is negative
+//       b is zero
+
+//       Functionality Base
+//       Result is negative
+//       Result is zero
+//       Result is positive
+//       Result is infinity
+//       Result is -infinity
+//       Result is NaN
+
         // Test dividing whole numbers
         assertEquals(2, calculatorUI.calculate(6, 3, '/'));
 
