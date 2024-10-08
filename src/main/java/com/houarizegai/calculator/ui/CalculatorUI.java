@@ -46,7 +46,7 @@ public class CalculatorUI {
     private JButton btn7;
     private JButton btn8;
     private JButton btn9;
-    private JButton btnPoint;
+    public JButton btnPoint;
     private JButton btnEqual;
     private JButton btnRoot;
     private JButton btnPower;
