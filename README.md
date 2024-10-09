@@ -374,31 +374,31 @@ To test the decimal functionality of the calculator to ensure it correctly displ
 
     - **Interface-Based Characteristics**:
     
-      | **Characteristic** |    **b1**    |   **b2**   |   **b3**   | **b4**   |    **b5**   |  **b6** |**b7**   |    **b8**   |  **b9** |
-      |--------------------|--------------|------------|------------|----------|-------------|---------|----------|-------------|---------|
+      | **Characteristic** |    **b1**    |   **b2**   |   **b3**   | **b4**   |    **b5**   |  **b6** |**b7**   |    **b8**   |
+      |--------------------|--------------|------------|------------|----------|-------------|---------|----------|-------------|
       | C1 = *value of firstNumber*   | integer greater than 0  | integer equal to 0  | integer less than 0 | decimal greater than 0.0 | decimal equal to 0.0 | decimal less than 0.0 | Not a Number (addToDisplay = true) | Not a Number (addToDisplay = false)
       | C2 = *value of secondNumber*  | integer greater than 0  | integer equal to 0    | integer less than 0  | decimal greater than 0.0 | decimal equal to 0.0 | decimal less than 0.0 | Not a Number (addToDisplay = true) | Not a Number (addToDisplay = false)
 
     - **Functionality-Based Characteristics**:
     
-      | **Characteristic** |    **b1**    |   **b2**   |   **b3**   | **b4**   |    **b5**   |  **b6** |
-      |--------------------|--------------|------------|------------|----------|-------------|---------|
-      | C1 = *result of the calculation*| greater than 0  | equal to 0 | less than 0 | infinity | -infinity | NaN |
+      | **Characteristic** |    **b1**    |   **b2**   |   **b3**   |
+      |--------------------|--------------|------------|------------|
+      | C1 = *result of the calculation*| Remain unchanged  | Appending a decimal point | Reset to 0. (addToDisplay = false) |
 
   - **Identify (possible) values**:
     
     - **Interface-Based Characteristics**:
     
-      | **Characteristic**           | **b1**               | **b2**             | **b3**             |
-      |------------------------------|----------------------|--------------------|--------------------|
-      | C1 = *value of firstNumber*   | 2       | 0         | -2        |
-      | C2 = *value of secondNumber*  | 3       | 0         | -3        |
+   | **Characteristic** |    **b1**    |   **b2**   |   **b3**   | **b4**   |    **b5**   |  **b6** |**b7**   |    **b8**   |
+      |--------------------|--------------|------------|------------|----------|-------------|---------|----------|-------------|
+      | C1 = *value of firstNumber*   | 5  | 0  | -5 | 5.0 |  0.0 | -5.0 | Hello (addToDisplay = true) | NaN (addToDisplay = false)
+      | C2 = *value of secondNumber*  | 5  | 0  | -5 | 5.0 |  0.0 | -5.0 | Hello (addToDisplay = true) | NaN (addToDisplay = false)
 
     - **Functionality-Based Characteristics**:
     
-      | **Characteristic** |    **b1**    |   **b2**   |   **b3**   | **b4**   |    **b5**   |  **b6** |
-      |--------------------|--------------|------------|------------|----------|-------------|---------|
-      | C1 = *result of the calculation*| 5      | 0         | -5        |  infinity | -infinity | NaN | 
+      | **Characteristic** |    **b1**    |   **b2**   |   **b3**   |
+      |--------------------|--------------|------------|------------|
+      | C1 = *result of the calculation*| 5 to 5  | 5 to 5. | 0. |
 
 - **Combine partitions to define test requirements**:
   - **Test requirements**: 
