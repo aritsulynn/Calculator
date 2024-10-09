@@ -8,9 +8,9 @@ To test the equal function when the two numbers is combined with the operations 
   - 
 
 - **Identify Parameters, Return Types, Return Values, and Exceptional Behavior**:
-  - **Parameters**: 
-  - **Return Type**: 
-  - **Return Value**: 
+  - **Parameters**: TypedNumber, SecondNumber, SelectedOperation
+  - **Return Type**: String
+  - **Return Value**: Result from selected parameter
   - **Exceptional Behavior**: 
     - **Non-Numeric Input**: 
     - **Fraction Input**: 
@@ -21,10 +21,13 @@ To test the equal function when the two numbers is combined with the operations 
 
     - **Interface-Based Characteristics**:
     
-      | **Characteristic**                           |**b1**| **b2**| 
-      |----------------------------------------------|------|-------|
-      | C1 = *is the button visible*                 | true | false | 
-      | C2 = *is the last number visible on screen*  | true | false | 
+      | **Characteristic**                           |**b1**        | **b2**     |   **b3**    | **b4**   |  **b5** |  **b6** |  **b7** |  **b8** |
+      |----------------------------------------------|--------------|------------|-------------|----------|---------|---------|---------|---------|
+      | C1 = *is the button visible*                 |true          | false      |             |          |         |         |         |         |
+      | C2 = *Value of the typed number*             |greater than 0| equal to 0 | less than 0 |          |         |         |         |         |
+      | C3 = *Value of the Second number*            |greater than 0| equal to 0 | less than 0 |          |         |         |         |         |
+      | C4 = *the Selected Operations*               |+             |-           |*            |/         |√        |^        |l        |%        |
+
 
     - **Functionality-Based Characteristics**:
     
