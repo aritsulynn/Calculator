@@ -393,11 +393,11 @@ To test the decimal functionality of the calculator to ensure it correctly displ
    | C1 = *value of firstNumber*   | 5  | 0  | -5 | 5.0 |  0.0 | -5.0 | Hello (addToDisplay = true) | NaN (addToDisplay = false)
    | C2 = *value of secondNumber*  | 5  | 0  | -5 | 5.0 |  0.0 | -5.0 | Hello (addToDisplay = true) | NaN (addToDisplay = false) |
 
-    - **Functionality-Based Characteristics**:
-    
-    | **Characteristic** |    **b1**    |   **b2**   |   **b3**   |
-    |--------------------|--------------|------------|------------|
-    | C1 = *result of the calculation*| 5 to 5  | 5 to 5. | 0. |
+  - **Functionality-Based Characteristics**:
+       
+       | **Characteristic** |    **b1**    |   **b2**   |   **b3**   |
+       |--------------------|--------------|------------|------------|
+       | C1 = *result of the calculation*| 5 to 5  | 5 to 5. | 0. |
 
 - **Combine partitions to define test requirements**:
   - **Test requirements**: 
