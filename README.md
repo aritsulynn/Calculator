@@ -395,9 +395,9 @@ To test the decimal functionality of the calculator to ensure it correctly displ
 
     - **Functionality-Based Characteristics**:
     
-      | **Characteristic** |    **b1**    |   **b2**   |   **b3**   |
-      |--------------------|--------------|------------|------------|
-      | C1 = *result of the calculation*| 5 to 5  | 5 to 5. | 0. |
+    | **Characteristic** |    **b1**    |   **b2**   |   **b3**   |
+    |--------------------|--------------|------------|------------|
+    | C1 = *result of the calculation*| 5 to 5  | 5 to 5. | 0. |
 
 - **Combine partitions to define test requirements**:
   - **Test requirements**: 
