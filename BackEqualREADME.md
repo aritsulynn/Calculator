@@ -21,10 +21,10 @@ To test the equal function when the two numbers is combined with the operations 
 
     - **Interface-Based Characteristics**:
     
-      | **Characteristic**                 |**b1**| **b2**| 
-      |------------------------------------|------|-------|
-      | C1 = *is the button visible*       | true | false | 
-      | C2 = *is the last number visible*  | true | false | 
+      | **Characteristic**                           |**b1**| **b2**| 
+      |----------------------------------------------|------|-------|
+      | C1 = *is the button visible*                 | true | false | 
+      | C2 = *is the last number visible on screen*  | true | false | 
 
     - **Functionality-Based Characteristics**:
     
