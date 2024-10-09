@@ -376,7 +376,7 @@ To test the decimal functionality of the calculator to ensure it correctly displ
       | **Characteristic** |    **b1**    |   **b2**   |   **b3**   | **b4**   |    **b5**   |  **b6** |**b7**   |    **b8**   |
       |--------------------|--------------|------------|------------|----------|-------------|---------|----------|-------------|
       | C1 = *value of firstNumber*   | integer greater than 0  | integer equal to 0  | integer less than 0 | decimal greater than 0.0 | decimal equal to 0.0 | decimal less than 0.0 | Not a Number (addToDisplay = true) | Not a Number (addToDisplay = false)
-      | C2 = *value of secondNumber*  | integer greater than 0  | integer equal to 0    | integer less than 0  | decimal greater than 0.0 | decimal equal to 0.0 | decimal less than 0.0 | Not a Number (addToDisplay = true) | Not a Number (addToDisplay = false)
+      | C2 = *value of secondNumber*  | integer greater than 0  | integer equal to 0    | integer less than 0  | decimal greater than 0.0 | decimal equal to 0.0 | decimal less than 0.0 | Not a Number (addToDisplay = true) | Not a Number (addToDisplay = false) |
 
     - **Functionality-Based Characteristics**:
     
