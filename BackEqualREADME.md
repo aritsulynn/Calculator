@@ -53,6 +53,7 @@ To test the equal function when the two numbers is combined with the operations 
       | C1 = *the result*| greater than 0  | equal to 0 | less than 0 | infinity | -infinity | NaN     |
 
 - **Combine partitions to define test requirements**:
+
       | **Characteristic**                           |**b1**        | **b2**     |   **b3**    | **b4**   |  **b5** |  **b6** |  **b7** |  **b8** |
       |----------------------------------------------|--------------|------------|-------------|----------|---------|---------|---------|---------|
       | C1 = *Value of the typed number*             |5             | 0          | -2          |          |         |         |         |         |         
