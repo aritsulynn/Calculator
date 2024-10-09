@@ -388,10 +388,10 @@ To test the decimal functionality of the calculator to ensure it correctly displ
     
     - **Interface-Based Characteristics**:
     
-   | **Characteristic** |    **b1**    |   **b2**   |   **b3**   | **b4**   |    **b5**   |  **b6** |**b7**   |    **b8**   |
-      |--------------------|--------------|------------|------------|----------|-------------|---------|----------|-------------|
-      | C1 = *value of firstNumber*   | 5  | 0  | -5 | 5.0 |  0.0 | -5.0 | Hello (addToDisplay = true) | NaN (addToDisplay = false)
-      | C2 = *value of secondNumber*  | 5  | 0  | -5 | 5.0 |  0.0 | -5.0 | Hello (addToDisplay = true) | NaN (addToDisplay = false) |
+| **Characteristic** |    **b1**    |   **b2**   |   **b3**   | **b4**   |    **b5**   |  **b6** |**b7**   |    **b8**   |
+|--------------------|--------------|------------|------------|----------|-------------|---------|----------|-------------|
+| C1 = *value of firstNumber*   | 5  | 0  | -5 | 5.0 |  0.0 | -5.0 | Hello (addToDisplay = true) | NaN (addToDisplay = false)
+| C2 = *value of secondNumber*  | 5  | 0  | -5 | 5.0 |  0.0 | -5.0 | Hello (addToDisplay = true) | NaN (addToDisplay = false) |
 
     - **Functionality-Based Characteristics**:
     
