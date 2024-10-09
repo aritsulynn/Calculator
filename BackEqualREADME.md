@@ -23,10 +23,9 @@ To test the equal function when the two numbers is combined with the operations 
     
       | **Characteristic**                           |**b1**        | **b2**     |   **b3**    | **b4**   |  **b5** |  **b6** |  **b7** |  **b8** |
       |----------------------------------------------|--------------|------------|-------------|----------|---------|---------|---------|---------|
-      | C1 = *is the button visible*                 |true          | false      |             |          |         |         |         |         |
-      | C2 = *Value of the typed number*             |greater than 0| equal to 0 | less than 0 |          |         |         |         |         |
-      | C3 = *Value of the Second number*            |greater than 0| equal to 0 | less than 0 |          |         |         |         |         |
-      | C4 = *the Selected Operations*               |+             |-           |*            |/         |√        |^        |l        |%        |
+      | C1 = *Value of the typed number*             |greater than 0| equal to 0 | less than 0 |          |         |         |         |         |
+      | C2 = *Value of the Second number*            |greater than 0| equal to 0 | less than 0 |          |         |         |         |         |
+      | C3 = *the Selected Operations*               |+             |-           |*            |/         |√        |^        |l        |%        |
 
 
     - **Functionality-Based Characteristics**:
@@ -42,10 +41,9 @@ To test the equal function when the two numbers is combined with the operations 
     
       | **Characteristic**                           |**b1**        | **b2**     |   **b3**    | **b4**   |  **b5** |  **b6** |  **b7** |  **b8** |
       |----------------------------------------------|--------------|------------|-------------|----------|---------|---------|---------|---------|
-      | C1 = *is the button visible*                 |true          | false      |             |          |         |         |         |         |
-      | C2 = *Value of the typed number*             |5             | 0          | -2          |          |         |         |         |         |         
-      | C3 = *Value of the Second number*            |3             | 0          |-6           |          |         |         |         |         |       
-      | C4 = *the Selected Operations*               |+             |-           |*            |/         |√        |^        |l        |%        |
+      | C1 = *Value of the typed number*             |5             | 0          | -2          |          |         |         |         |         |         
+      | C2 = *Value of the Second number*            |3             | 0          |-6           |          |         |         |         |         |       
+      | C3 = *the Selected Operations*               |+             |-           |*            |/         |√        |^        |l        |%        |
 
     - **Functionality-Based Characteristics**:
     
@@ -58,10 +56,9 @@ To test the equal function when the two numbers is combined with the operations 
   - **Test requirements**: 
       | **Characteristic**                           |**b1**        | **b2**     |   **b3**    | **b4**   |  **b5** |  **b6** |  **b7** |  **b8** |
       |----------------------------------------------|--------------|------------|-------------|----------|---------|---------|---------|---------|
-      | C1 = *is the button visible*                 |true          | false      |             |          |         |         |         |         |
-      | C2 = *Value of the typed number*             |5             | 0          | -2          |          |         |         |         |         |         
-      | C3 = *Value of the Second number*            |3             | 0          |-6           |          |         |         |         |         |       
-      | C4 = *the Selected Operations*               |+             |-           |*            |/         |√        |^        |l        |%        |
-      | C5 = *the Result*                            |greater than 0|equal to 0  |less than 0  |infinity  |-infinity| NaN     |         |         |
+      | C1 = *Value of the typed number*             |5             | 0          | -2          |          |         |         |         |         |         
+      | C2 = *Value of the Second number*            |3             | 0          |-6           |          |         |         |         |         |       
+      | C3 = *the Selected Operations*               |+             |-           |*            |/         |√        |^        |l        |%        |
+      | C4 = *the Result*                            |greater than 0|equal to 0  |less than 0  |infinity  |-infinity| NaN     |         |         |
 
 
