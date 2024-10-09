@@ -393,9 +393,9 @@ To test the square root functionality of the calculator to ensure it correctly c
   - **Return Type**: `double`
   - **Return Value**: Result of the square root calculation
   - **Exceptional Behavior**:
-    - **Non-Numeric Input**: If the input is non-numeric (like a string or special character), it should return `NaN` or throw an error.
+    - **Non-Numeric Input**: If the input is non-numeric (like a string or special character), it should return the same string or throw an error.
     - **Negative Input**: If the input is a negative number, it should return `NaN` as square roots of negative numbers are undefined in the real number system.
-    - **Empty Input**: If the input is an empty string, it should return `NaN`.
+    - **Empty Input**: If the input is an empty string, it should return "".
 
 - **Model the Input Domain**:
 
@@ -420,7 +420,7 @@ To test the square root functionality of the calculator to ensure it correctly c
   - **Test requirements**: number of tests (number of largest characteristic) = 5
 
 - **Derive test values and expected values**:
-  `Base Choice Coverage (BCC)` select (valid positive input) for base
+  `ACoC` Technique
 
   | **Test**            | **inputNumber** | **Expected result** |
   | ------------------- | --------------- | ------------------- |
