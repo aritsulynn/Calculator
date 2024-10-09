@@ -211,8 +211,8 @@ To test the division functionality of the calculator to ensure it correctly divi
 
     - **Functionality-Based Characteristics**:
     
-      | **Characteristic**              | **b1**              | **b2**             | **b3**             |
-      |---------------------------------|---------------------|--------------------|--------------------|
+      | **Characteristic** |    **b1**    |   **b2**   |   **b3**   | **b4**   |    **b5**   |  **b6** |
+      |--------------------|--------------|------------|------------|----------|-------------|---------|
       | C1 = *result of the calculation*| 5      | 0         | -5        |  infinity | -infinity | NaN | 
 
 - **Combine partitions to define test requirements**:
