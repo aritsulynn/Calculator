@@ -166,6 +166,58 @@ To test the subtraction functionality of the calculator to ensure it correctly s
     | T3 (0, >0) | 0 | 1 | -1 |
     | T3 (<0, >0) | -1 | 1 | -2 |
 
+## ➗ testDivision()
+
+### Goal of test case:
+To test the division functionality of the calculator to ensure it correctly divides two numbers.
+
+### Input Domain Modelling
+- **Identify Testable Functions**: 
+  - `calculate()`
+
+- **Identify Parameters, Return Types, Return Values, and Exceptional Behavior**:
+  - **Parameters**: `firstNumber`, `secondNumber`, `operator`
+  - **Return Type**: `double`
+  - **Return Value**: Result of the calculation
+  - **Exceptional Behavior**: If 1 divided by 0 will get “infinity”, if -1 divided by 0 will get -infinity and if 0/0 will get “NaN”
+    - **Non-Numeric Input**: If any input is non-numeric (like a string or special character), it should throw an error.
+    - **Fraction Input**: If fractions like `1/2` are entered, the system should reject it and throw an error since fractions are not supported (but decimals like `0.5` are).
+
+- **Model the Input Domain**:
+
+  - **Partition Characteristics**:
+
+    - **Interface-Based Characteristics**:
+    
+      | **Characteristic**           | **b1**               | **b2**             | **b3**             |
+      |------------------------------|----------------------|--------------------|--------------------|
+      | C1 = *value of firstNumber*   | greater than 0       | equal to 0         | less than 0        |
+      | C2 = *value of secondNumber*  | greater than 0       | equal to 0         | less than 0        |
+
+    - **Functionality-Based Characteristics**:
+    
+      | **Characteristic** |    **b1**    |   **b2**   |   **b3**   | **b4**   |    **b5**   |  **b6** |
+      |--------------------|--------------|------------|------------|----------|-------------|---------|
+      | C1 = *result of the calculation*| greater than 0  | equal to 0 | less than 0 | infinity | -infinity | NaN |
+
+  - **Identify (possible) values**:
+    
+    - **Interface-Based Characteristics**:
+    
+      | **Characteristic**           | **b1**               | **b2**             | **b3**             |
+      |------------------------------|----------------------|--------------------|--------------------|
+      | C1 = *value of firstNumber*   | 2       | 0         | -2        |
+      | C2 = *value of secondNumber*  | 3       | 0         | -3        |
+
+    - **Functionality-Based Characteristics**:
+    
+      | **Characteristic**              | **b1**              | **b2**             | **b3**             |
+      |---------------------------------|---------------------|--------------------|--------------------|
+      | C1 = *result of the calculation*| 5      | 0         | -5        |  infinity | -infinity | NaN | 
+
+- **Combine partitions to define test requirements**:
+  - **Test requirements**: number of tests (number of largest characteristic) = 5
+
 ## 💪 testPower()
 
 ### Goal of the test case:
