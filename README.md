@@ -216,7 +216,7 @@ To test the division functionality of the calculator to ensure it correctly divi
       | C1 = *result of the calculation*| 5      | 0         | -5        |  infinity | -infinity | NaN | 
 
 - **Combine partitions to define test requirements**:
-  - **Test requirements**: number of tests (number of largest characteristic) = 5
+  - **Test requirements**: 
 
 ## 💪 testPower()
 
