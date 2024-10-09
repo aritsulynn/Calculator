@@ -54,7 +54,7 @@ public class CalculatorUI {
 
     private char selectedOperator = ' ';
     private boolean go = true; // For calculate with Opt != (=)
-    private boolean addToDisplay = true; // Connect numbers in display
+    public boolean addToDisplay = true; // Connect numbers in display
     private double typedValue = 0;
 
     private final Map<String, Theme> themesMap;

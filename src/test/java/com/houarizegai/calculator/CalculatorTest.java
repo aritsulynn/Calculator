@@ -374,17 +374,17 @@ a == 0:
 //        a is the text showing on the screen
 
 //        Interface Base
-//        a is zero
-//        a is positive integer
-//        a is positive integer
-//        a is positive decimal
-//        a is negative decimal
-//        a is not a number
-
+//        a is zero and addtoDisplay = true
+//        a is positive integer and addtoDisplay = true
+//        a is positive integer and addtoDisplay = true
+//        a is positive decimal and addtoDisplay = true
+//        a is negative decimal and addtoDisplay = true
+//        a is not a number and addtoDisplay = true
+//          a is not a number and addtoDisplay = false  ex: infinity, -infinity, NaN
 
 //        Functionality Base
-//        Result is 'a' + '.' (No change)
-//        Result is a (Appending a decimal point)
+//        Result is 'a.' (No change)
+//        Result is 'a' + '.' (Appending a decimal point)
 //
 //
 //
@@ -392,6 +392,11 @@ a == 0:
 
         // Input 0
         calculatorUI.inputScreen.setText("0");
+        calculatorUI.btnPoint.doClick();
+        assertEquals("0.", calculatorUI.inputScreen.getText());
+
+        // Input is not a number
+        calculatorUI.inputScreen.setText("0.");
         calculatorUI.btnPoint.doClick();
         assertEquals("0.", calculatorUI.inputScreen.getText());
 
@@ -416,9 +421,15 @@ a == 0:
         assertEquals("-5.2", calculatorUI.inputScreen.getText());
 
         // Input is not a number
-        calculatorUI.inputScreen.setText("Infinity");
+        calculatorUI.inputScreen.setText("Hello");
         calculatorUI.btnPoint.doClick();
-        assertEquals("Infinity.", calculatorUI.inputScreen.getText());
+        assertEquals("Hello.", calculatorUI.inputScreen.getText());
+
+        // addToDisplay false when infinity, -infinity, NaN
+        calculatorUI.addToDisplay = false; // Simulate that addToDisplay is false
+        calculatorUI.btnPoint.doClick(); // Simulate clicking the decimal button
+        assertEquals("0.", calculatorUI.inputScreen.getText()); // Check if inputScreen is set to "0."
+        assertEquals(true, calculatorUI.addToDisplay); // Check if addToDisplay is now true
 
     }
 
