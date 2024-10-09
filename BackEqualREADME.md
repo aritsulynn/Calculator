@@ -1,4 +1,4 @@
-## (=) testEquals()
+## (=) testEquals() ยังไม่เสร็จจ้า
 
 ### Goal of the test case:
 To test the equal function when the two numbers is combined with the operations successfully.
