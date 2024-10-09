@@ -348,3 +348,57 @@ To ensure that the clear button correctly resets all relevant fields.
     | T3 (True, NaN)     | 1                   | 0                   |
     | T4 (True, NaN)     | -1                  | 0                   |
     | T5 (False, NaN)    | NaN                 | NaN                 |
+
+
+## ![image](https://github.com/user-attachments/assets/fa38709f-b094-4da9-b6db-927b0a39a79d)
+ testDecimal()
+
+### Goal of test case:
+To test the decimal functionality of the calculator to ensure it correctly display.
+
+### Input Domain Modelling
+- **Identify Testable Functions**: 
+  - `calculate()`
+
+- **Identify Parameters, Return Types, Return Values, and Exceptional Behavior**:
+  - **Parameters**: `firstNumber`, `secondNumber`, `operator`
+  - **Return Type**: `double`
+  - **Return Value**: Result of the calculation
+  - **Exceptional Behavior**: If calculator show “infinity”, -infinity and  “NaN” mean that addtoDisplay = false resulting in display 0. after click decimal(.) button
+    - **Non-Numeric Input**: If any input is non-numeric (like a string or special character), it should throw an error.
+    - **Fraction Input**: If fractions like `1/2` are entered, the system should reject it and throw an error since fractions are not supported (but decimals like `0.5` are).
+
+- **Model the Input Domain**:
+
+  - **Partition Characteristics**:
+
+    - **Interface-Based Characteristics**:
+    
+      | **Characteristic** |    **b1**    |   **b2**   |   **b3**   | **b4**   |    **b5**   |  **b6** |**b7**   |    **b8**   |  **b9** |
+      |--------------------|--------------|------------|------------|----------|-------------|---------|----------|-------------|---------|
+      | C1 = *value of firstNumber*   | integer greater than 0  | integer equal to 0  | integer less than 0 | decimal greater than 0.0 | decimal equal to 0.0 | decimal less than 0.0 | Not a Number (addToDisplay = true) | Not a Number (addToDisplay = false)
+      | C2 = *value of secondNumber*  | integer greater than 0  | integer equal to 0    | integer less than 0  | decimal greater than 0.0 | decimal equal to 0.0 | decimal less than 0.0 | Not a Number (addToDisplay = true) | Not a Number (addToDisplay = false)
+
+    - **Functionality-Based Characteristics**:
+    
+      | **Characteristic** |    **b1**    |   **b2**   |   **b3**   | **b4**   |    **b5**   |  **b6** |
+      |--------------------|--------------|------------|------------|----------|-------------|---------|
+      | C1 = *result of the calculation*| greater than 0  | equal to 0 | less than 0 | infinity | -infinity | NaN |
+
+  - **Identify (possible) values**:
+    
+    - **Interface-Based Characteristics**:
+    
+      | **Characteristic**           | **b1**               | **b2**             | **b3**             |
+      |------------------------------|----------------------|--------------------|--------------------|
+      | C1 = *value of firstNumber*   | 2       | 0         | -2        |
+      | C2 = *value of secondNumber*  | 3       | 0         | -3        |
+
+    - **Functionality-Based Characteristics**:
+    
+      | **Characteristic** |    **b1**    |   **b2**   |   **b3**   | **b4**   |    **b5**   |  **b6** |
+      |--------------------|--------------|------------|------------|----------|-------------|---------|
+      | C1 = *result of the calculation*| 5      | 0         | -5        |  infinity | -infinity | NaN | 
+
+- **Combine partitions to define test requirements**:
+  - **Test requirements**: 
