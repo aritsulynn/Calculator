@@ -40,10 +40,12 @@ To test the equal function when the two numbers is combined with the operations 
     - **Interface-Based Characteristics**:
     
     
-      | **Characteristic**                 |**b1**| **b2**| 
-      |------------------------------------|------|-------|
-      | C1 = *is the button visible*       | true | false | 
-      | C2 = *is the last number visible*  | true | false | 
+      | **Characteristic**                           |**b1**        | **b2**     |   **b3**    | **b4**   |  **b5** |  **b6** |  **b7** |  **b8** |
+      |----------------------------------------------|--------------|------------|-------------|----------|---------|---------|---------|---------|
+      | C1 = *is the button visible*                 |true          | false      |             |          |         |         |         |         |
+      | C2 = *Value of the typed number*             |5             | 0          | -2          |          |         |         |         |         |         
+      | C3 = *Value of the Second number*            |3             | 0          |-6           |          |         |         |         |         |       
+      | C4 = *the Selected Operations*               |+             |-           |*            |/         |√        |^        |l        |%        |
 
     - **Functionality-Based Characteristics**:
     
