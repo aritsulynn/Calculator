@@ -380,12 +380,12 @@ a == 0:
 //        a is positive decimal and addtoDisplay = true
 //        a is negative decimal and addtoDisplay = true
 //        a is not a number and addtoDisplay = true
-//          a is not a number and addtoDisplay = false  ex: infinity, -infinity, NaN
+//        a is not a number and addtoDisplay = false  ex: infinity, -infinity, NaN
 
 //        Functionality Base
 //        Result is 'a.' (No change)
 //        Result is 'a' + '.' (Appending a decimal point)
-//
+//        If addtoDisplay = false, result is 0. and change addtoDisplay = true
 //
 //
 //
