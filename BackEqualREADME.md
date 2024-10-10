@@ -59,8 +59,8 @@ To delete unnessecary number on the screen to fix the value of number.
      
   | **Test** | **InputNumber** | **Expected result** |
   |----------|-----------------|---------------------|
-  | T1 ( True, Greater than 0 , 1-digit )   | 6 | 0 |
-  | T2 ( True, Greater than 0 , Many digits ) | 25 | 2 |
+  | T1 ( True, Positive, 1-digit )   | 6 | 0 |
+  | T2 ( True, Positive, Many digits ) | 25 | 2 |
   | T3 ( True, Negative , Many digits ) | -14 | 1 |
   | T4 ( True, Negative , 1-digit ) | -8 | 0 |
 
