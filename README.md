@@ -489,7 +489,7 @@ To delete unnessecary number on the screen to fix the value of number.
     - Merge **Functionality-Based Characteristics** and **Interface-Based Characteristics** for test cases
 
     - **Multiple Base Coverage Criteria (MBCC):**
-        **Selected Base:** ( True, Greater than 0 , 1-digit ), ( True, Less than 0 , Many Digits )
+        **Selected Base:** ( True, Positive , 1-digit ), ( True, Negative , Many Digits )
      
   | **Test** | **InputNumber** | **Expected result** |
   |----------|-----------------|---------------------|
