@@ -25,7 +25,7 @@ To delete unnessecary number on the screen to fix the value of number.
 
       | **Characteristic**           | **b1**         | **b2**     | 
       | ---------------------------- | -------------- | ---------- | 
-      | _C1 = Number on the screen is shown_   | True | False |
+      | _C1 = Button on the screen is visible_   | True | False |
 
     - **Functionality-Based Characteristics**:
 
@@ -39,7 +39,7 @@ To delete unnessecary number on the screen to fix the value of number.
 
       | **Characteristic**               | **b1** | **b2** | 
       | -------------------------------- | ------ | ------ |
-      | _C1 = Number on the screen is shown_   | "12" | "" |
+      | _C1 = Button on the screen is visible_   | "True" | "False" |
 
     - **Functionality-Based Characteristics**:
 
