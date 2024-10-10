@@ -558,7 +558,9 @@ To ensure that the clear button correctly resets all relevant fields.
     |------------------------------|----------------------|--------------------|--------------------|--------------------|
     | C1 = _Is Button visible_ | True | False | | |
     | C2 = _value on the screen_ | NaN | equal to 0 | greater than 0 | less than 0 |
-    `Base Choice Coverage (BCC)` select (True, NaN) for base
+    
+  - `Base Choice Coverage (BCC)` select (True, NaN) for base
+    
     | **Test** | **Value on Screen** | **Expected result** |
     |--------------------|---------------------|---------------------|
     | T1 (True, NaN) | NaN | 0 |
