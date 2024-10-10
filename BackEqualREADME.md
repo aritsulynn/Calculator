@@ -55,6 +55,7 @@ To delete unnessecary number on the screen to fix the value of number.
   - **Test requirements**: **2 base used** => 2 + ( 2 * (2 - 1) ) + ( 2 * (2 - 2) ) + ( 2 * (2 - 2) ) = **4 test cases**
 
 - **Derive test values and expected values**:
+    - Merge **Functionality-Based Characteristics** and **Interface-Based Characteristics** for test cases
     **Selected Base:** ( True, Greater than 0 , 1-digit ), ( True, Less than 0 , Many Digits )
      
   | **Test** | **InputNumber** | **Expected result** |
