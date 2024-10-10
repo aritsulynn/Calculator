@@ -55,7 +55,7 @@ To test the equal function when the two numbers is combined with the operations 
 - **Combine partitions to define test requirements**:
 
 
-  - **Test requirements**: 2 base used => 2 + ( 2 * (3 - 2) ) + ( 2 * (3 - 2) ) + ( 2 * (8 - 2) ) = 18 test cases
+  - **Test requirements**: 2 base used => 2 + ( 2 * (3 - 2) ) + ( 2 * (3 - 2) ) + ( 2 * (6 - 2) ) = 14 test cases
      
 
 
