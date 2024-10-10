@@ -429,6 +429,76 @@ To test the square root functionality of the calculator to ensure it correctly c
   | T5 (invalid input)  | "Hello World"   | "Hello World"       |
   | T6 (negative input) | "-81"           | NaN                 |
 
+## ⬅️ testBackSpace()
+
+### Goal of the test case:
+
+To delete unnessecary number on the screen to fix the value of number.
+
+### Input Domain Modelling:
+
+- **Identify Testable Functions**:
+
+  - `btnBack.doClick()`
+
+- **Identify Parameters, Return Types, Return Values, and Exceptional Behavior**:
+
+  - **Parameters**: `Number(String)`,
+  - **Return Type**: `String`
+  - **Return Value**: `New Number`
+  - **Exceptional Behavior**:None
+
+- **Model the Input Domain**:
+
+  - **Partition Characteristics**:
+
+    - **Interface-Based Characteristics**:
+
+      | **Characteristic**               | **b1**         | **b2**     |
+      | -------------------------------- | -------------- | ---------- |
+      | _C1 = the initial value of number_         |   Positive | Negative |
+      | _C2 = the Digit of number_         |   1- digit | Many Digits  |
+
+    - **Functionality-Based Characteristics**:
+
+      | **Characteristic**           | **b1**         | **b2**     | 
+      | ---------------------------- | -------------- | ---------- | 
+      | _C1 = Button on the screen is visible_   | True | False |
+
+
+  - **Identify (possible) values**:
+
+    - **Interface-Based Characteristics**:
+      | **Characteristic**           | **b1** | **b2** |
+      | ---------------------------- | ------ | ------ | 
+      | _C1 = the value of number_  | 2      | -2     |
+      |_C2 = the Digit of number_ | 3      | 25      |
+
+    - **Functionality-Based Characteristics**:
+
+      | **Characteristic**               | **b1** | **b2** | 
+      | -------------------------------- | ------ | ------ |
+      | _C1 = Button on the screen is visible_   | True | False |
+
+
+- **Combine partitions to define test requirements**:
+
+  - **Test requirements**: **2 base used** => 2 + ( 2 * (2 - 1) ) + ( 2 * (2 - 2) ) + ( 2 * (2 - 2) ) = **4 test cases**
+
+- **Derive test values and expected values**:
+    - Merge **Functionality-Based Characteristics** and **Interface-Based Characteristics** for test cases
+
+    - **Multiple Base Coverage Criteria (MBCC):**
+        **Selected Base:** ( True, Greater than 0 , 1-digit ), ( True, Less than 0 , Many Digits )
+     
+  | **Test** | **InputNumber** | **Expected result** |
+  |----------|-----------------|---------------------|
+  | T1 ( True, Positive, 1-digit )   | 6 | 0 |
+  | T2 ( True, Positive, Many digits ) | 25 | 2 |
+  | T3 ( True, Negative , Many digits ) | -14 | 1 |
+  | T4 ( True, Negative , 1-digit ) | -8 | 0 |
+
+
 ## 🧹 testClear()
 
 ### Goal of test case:
