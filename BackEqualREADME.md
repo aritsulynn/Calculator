@@ -21,11 +21,11 @@ To test the equal function when the two numbers is combined with the operations 
 
     - **Interface-Based Characteristics**:
     
-      | **Characteristic**                           |**b1**        | **b2**     |   **b3**    | **b4**   |  **b5** |  **b6** |  **b7** |  **b8** |
-      |----------------------------------------------|--------------|------------|-------------|----------|---------|---------|---------|---------|
-      | C1 = *Value of the typed number*             |greater than 0| equal to 0 | less than 0 |          |         |         |         |         |
-      | C2 = *Value of the Second number*            |greater than 0| equal to 0 | less than 0 |          |         |         |         |         |
-      | C3 = *the Selected Operations*               |+             |-           |*            |/         |√        |^        |l        |%        |
+      | **Characteristic**                           |**b1**        | **b2**     |   **b3**    | **b4**   |  **b5** |  **b6** |
+      |----------------------------------------------|--------------|------------|-------------|----------|---------|---------|
+      | C1 = *Value of the typed number*             |greater than 0| equal to 0 | less than 0 |          |         |         |
+      | C2 = *Value of the Second number*            |greater than 0| equal to 0 | less than 0 |          |         |         |
+      | C3 = *the Selected Operations*               |+             |-           |*            |/         |%        |^        |
 
 
     - **Functionality-Based Characteristics**:
@@ -39,11 +39,11 @@ To test the equal function when the two numbers is combined with the operations 
     - **Interface-Based Characteristics**:
     
     
-      | **Characteristic**                           |**b1**        | **b2**     |   **b3**    | **b4**   |  **b5** |  **b6** |  **b7** |  **b8** |
-      |----------------------------------------------|--------------|------------|-------------|----------|---------|---------|---------|---------|
-      | C1 = *Value of the typed number*             |5             | 0          | -2          |          |         |         |         |         |         
-      | C2 = *Value of the Second number*            |3             | 0          |-6           |          |         |         |         |         |       
-      | C3 = *the Selected Operations*               |+             |-           |*            |/         |√        |^        |l        |%        |
+      | **Characteristic**                           |**b1**        | **b2**     |   **b3**    | **b4**   |  **b5** |  **b6** |
+      |----------------------------------------------|--------------|------------|-------------|----------|---------|---------|
+      | C1 = *Value of the typed number*             |5             | 0          | -2          |          |         |         |         
+      | C2 = *Value of the Second number*            |3             | 0          |-6           |          |         |         |     
+      | C3 = *the Selected Operations*               |+             |-           |*            |/         |%        |^        |
 
     - **Functionality-Based Characteristics**:
     
