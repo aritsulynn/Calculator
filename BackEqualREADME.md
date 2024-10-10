@@ -26,16 +26,15 @@ To delete unnessecary number on the screen to fix the value of number.
 
     - **Interface-Based Characteristics**:
 
-      | **Characteristic**           | **b1**         | **b2**     | **b3**      |
-      | ---------------------------- | -------------- | ---------- | ----------- |
-      | C1 = _value of firstNumber_  | greater than 0 | equal to 0 | less than 0 |
-      | C2 = _value of secondNumber_ | greater than 0 | equal to 0 | less than 0 |
+      | **Characteristic**           | **b1**         | **b2**     | 
+      | ---------------------------- | -------------- | ---------- | 
+      | C1 = Number on the screen is shown   | True | False |
 
     - **Functionality-Based Characteristics**:
 
-      | **Characteristic**               | **b1**         | **b2**     | **b3**     | **b4**      | **b5**   |
-      | -------------------------------- | -------------- | ---------- | ---------- | ----------- | -------- |
-      | C1 = _result of the calculation_ | greater than 1 | equal to 1 | equal to 0 | less than 0 | infinity |
+      | **Characteristic**               | **b1**         | **b2**     | **b3**     |
+      | -------------------------------- | -------------- | ---------- | ---------- | 
+      | C1 = _result of the calculation_ | greater than 1 | equal to 1 | equal to 0 |
 
   - **Identify (possible) values**:
 
