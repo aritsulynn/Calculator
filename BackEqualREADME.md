@@ -57,7 +57,8 @@ To delete unnessecary number on the screen to fix the value of number.
 - **Derive test values and expected values**:
     - Merge **Functionality-Based Characteristics** and **Interface-Based Characteristics** for test cases
 
-    - **Selected Base:** ( True, Greater than 0 , 1-digit ), ( True, Less than 0 , Many Digits )
+    - **Multiple Base Coverage Criteria (MBCC):**
+        **Selected Base:** ( True, Greater than 0 , 1-digit ), ( True, Less than 0 , Many Digits )
      
   | **Test** | **InputNumber** | **Expected result** |
   |----------|-----------------|---------------------|
@@ -123,7 +124,7 @@ To test the equal function when the two numbers is combined with the operations 
 
   - **Test requirements**: **2 base used** => 2 + ( 2 * (3 - 2) ) + ( 2 * (3 - 2) ) + ( 2 * (6 - 2) ) = **14 test cases**
 
-- **Derive test values and expected values:** Multiple Base Coverage Criteria (MBCC):
+- **Derive test values and expected values:** **Multiple Base Coverage Criteria (MBCC):**
     **Selected Base:** ( Greater than 0, Greater than 0 , + ) , ( Greater than 0, Less than 0 , + )
      
   | **Test** | **firstNumber** | **secondNumber** | **Expected result** |
