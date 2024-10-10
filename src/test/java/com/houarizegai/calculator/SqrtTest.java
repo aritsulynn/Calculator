@@ -68,7 +68,10 @@ public class ReflectionExample {
 }
 ```
  */
-
+/*
+ * Copyright (C) 2024 Purinat Pattanakeaw - All Rights Reserved
+ * You may use, distribute and modify this code under the terms of the MIT license.
+ */
 public class SqrtTest {
     private static CalculatorUI calculatorUI;
     private static boolean shouldRunTests = false;

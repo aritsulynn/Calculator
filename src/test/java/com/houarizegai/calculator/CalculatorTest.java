@@ -407,7 +407,10 @@ a == 0:
         }
         assertEquals("NaN", calculatorUI.inputScreen.getText());
     }
-
+    /*
+     * Copyright (C) 2024 Pattaradnai Kaeodumkoeng - All Rights Reserved
+     * You may use, distribute and modify this code under the terms of the MIT license.
+     */
     @Test
     public void testDecimal() {
 //        a is the text showing on the screen
