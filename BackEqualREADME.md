@@ -56,6 +56,24 @@ To test the equal function when the two numbers is combined with the operations 
 
 
   - **Test requirements**: **2 base used** => 2 + ( 2 * (3 - 2) ) + ( 2 * (3 - 2) ) + ( 2 * (6 - 2) ) = **14 test cases**
-     
 
+- **Derive test values and expected values:** Multiple Base Coverage Criteria (MBCC):
+    **Selected Base:** ( Greater than 0, Greater than 0 , + ) , ( Greater than 0, Less than 0 , + )
+     
+  | **Test** | **firstNumber** | **secondNumber** | **Expected result** |
+  |--------------------|---|---|---|
+  | TC1 ( a > 0, b > 0, + )   | 5 | 3 | 8 |
+  | TC2 ( a > 0, b > 0, - ) | 7 | 2 | 5 |
+  | TC3 ( a > 0, b > 0, * ) | 6 | 2 | 12 |
+  | TC4 ( a > 0, b > 0, / ) | 18 | 3 | 6 |
+  | TC5 ( a > 0, b > 0, ^ ) | 4 | 3 | 64 |
+  | TC6 ( a > 0, b > 0, % ) | 100 | 10 | 0 |
+  | TC7 ( a < 0, b > 0, + ) | -8 | 10 | 2 |
+  | TC8 ( a > 0, b < 0, + )| 14 | -16 | -2 |
+  | TC9 ( a > 0, b < 0, - ) | 1 | -9 | 10 |
+  | TC10 ( a > 0, b > 0, * ) | 5 | -7 | -35 |
+  | TC11 ( a > 0, b > 0, / ) | 27 | -9 | -3 |
+  | TC12   ( a > 0, b < 0, ^ )| 0 | 1 | -1 |
+  | TC13  ( a < 0, b < 0, + ) | -2 | -1 | -3 |
+  | TC14  ( a = 0, b < 0, + ) | 0 | -4 | -4 |
 
