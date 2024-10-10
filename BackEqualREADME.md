@@ -43,10 +43,10 @@ To delete unnessecary number on the screen to fix the value of number.
 
     - **Functionality-Based Characteristics**:
 
-      | **Characteristic**           | **b1** | **b2** | **b3** |
-      | ---------------------------- | ------ | ------ | ------ |
-      | _C1 = the value of number_  | 2      | 0      | -2     |
-      |_C2 = the Digit of number_ | 3      | 25      |     |
+      | **Characteristic**           | **b1** | **b2** |
+      | ---------------------------- | ------ | ------ | 
+      | _C1 = the value of number_  | 2      | -2     |
+      |_C2 = the Digit of number_ | 3      | 25      |
 
 
 
