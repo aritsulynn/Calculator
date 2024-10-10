@@ -34,8 +34,8 @@ To delete unnessecary number on the screen to fix the value of number.
 
       | **Characteristic**               | **b1**         | **b2**     | **b3**     |
       | -------------------------------- | -------------- | ---------- | ---------- | 
-      | C1 = _result of the calculation_ | greater than 1 | equal to 1 | equal to 0 |
-
+      | C1 = the value of number         |   greater than 0 | equal to 0 | Less than 0 |
+      | C2 = the Digit of number         |   1- digits | 2 digits | Many Digits  |
   - **Identify (possible) values**:
 
     - **Interface-Based Characteristics**:
