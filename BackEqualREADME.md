@@ -1,4 +1,4 @@
-## ⬅️ testBackSpace() เหลือแค่อันนี้ละ
+## ⬅️ testBackSpace()
 
 ### Goal of the test case:
 
