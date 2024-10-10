@@ -56,7 +56,8 @@ To delete unnessecary number on the screen to fix the value of number.
 
 - **Derive test values and expected values**:
     - Merge **Functionality-Based Characteristics** and **Interface-Based Characteristics** for test cases
-    **Selected Base:** ( True, Greater than 0 , 1-digit ), ( True, Less than 0 , Many Digits )
+
+    - **Selected Base:** ( True, Greater than 0 , 1-digit ), ( True, Less than 0 , Many Digits )
      
   | **Test** | **InputNumber** | **Expected result** |
   |----------|-----------------|---------------------|
