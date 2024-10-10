@@ -1,3 +1,71 @@
+## ⬅️ testBackSpace()
+
+### Goal of the test case:
+
+To delete unnessecary number on the screen to fix the value of number.
+
+### Input Domain Modelling:
+
+- **Identify Testable Functions**:
+
+  - `calculate()`
+
+- **Identify Parameters, Return Types, Return Values, and Exceptional Behavior**:
+
+  - **Parameters**: `firstNumber`, `secondNumber`, `operator`
+  - **Return Type**: `double`
+  - **Return Value**: Result of the calculation
+  - **Exceptional Behavior**:
+    - **Non-Numeric Input**: If any input is non-numeric, an error should be thrown.
+    - **Fraction Input**: If fractions like `1/2` are entered, the system will reject it and throw an error since fractions are not supported. Decimal equivalents (like `0.5`) are allowed.
+    - **Zero Raised to Negative Power**: If `firstNumber` is `0` and `secondNumber` is negative, the result will be infinity.
+
+- **Model the Input Domain**:
+
+  - **Partition Characteristics**:
+
+    - **Interface-Based Characteristics**:
+
+      | **Characteristic**           | **b1**         | **b2**     | **b3**      |
+      | ---------------------------- | -------------- | ---------- | ----------- |
+      | C1 = _value of firstNumber_  | greater than 0 | equal to 0 | less than 0 |
+      | C2 = _value of secondNumber_ | greater than 0 | equal to 0 | less than 0 |
+
+    - **Functionality-Based Characteristics**:
+
+      | **Characteristic**               | **b1**         | **b2**     | **b3**     | **b4**      | **b5**   |
+      | -------------------------------- | -------------- | ---------- | ---------- | ----------- | -------- |
+      | C1 = _result of the calculation_ | greater than 1 | equal to 1 | equal to 0 | less than 0 | infinity |
+
+  - **Identify (possible) values**:
+
+    - **Interface-Based Characteristics**:
+
+      | **Characteristic**           | **b1** | **b2** | **b3** |
+      | ---------------------------- | ------ | ------ | ------ |
+      | C1 = _value of firstNumber_  | 2      | 0      | -2     |
+      | C2 = _value of secondNumber_ | 3      | 0      | -3     |
+
+    - **Functionality-Based Characteristics**:
+
+      | **Characteristic**               | **b1** | **b2** | **b3** | **b4** | **b5**    |
+      | -------------------------------- | ------ | ------ | ------ | ------ | --------- |
+      | C1 = _result of the calculation_ | 8      | 1      | 0      | -0.125 | infiinity |
+
+- **Combine partitions to define test requirements**:
+
+  - **Assumption**: choose one value from each block
+  - **Test requirements**: number of tests (number of largest characteristic) = 5
+
+- **Derive test values and expected values**:
+  `Each Choice Coverage (ECC)`
+  | **Test** | **firstNumber** | **secondNumber** | **Expected result** |
+  |--------------------|---|---|---|
+  | T1 (>0, >0) | 2 | 3 | 8 |
+  | T2 (>0, 0) | 2 | 0 | 1 |
+  | T3 (0, >0) | 0 | 3 | 0 |
+  | T4 (<0, <0) | -2 | -3 | -0.125 |
+  | T5 (0, <0) | 0 | -3 | infinity |
 ## (=) testEquals() 
 
 ### Goal of the test case:
@@ -5,15 +73,13 @@ To test the equal function when the two numbers is combined with the operations 
 
 ### Input Domain Modelling
 - **Identify Testable Functions**: 
-  - 
+  - btnEqual.doClick()
 
 - **Identify Parameters, Return Types, Return Values, and Exceptional Behavior**:
   - **Parameters**: TypedNumber, SecondNumber, SelectedOperation
   - **Return Type**: String
   - **Return Value**: Result from selected parameter
-  - **Exceptional Behavior**: 
-    - **Non-Numeric Input**: 
-    - **Fraction Input**: 
+  - **Exceptional Behavior**: None
 
 - **Model the Input Domain**:
 
