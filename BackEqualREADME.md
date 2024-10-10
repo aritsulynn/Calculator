@@ -77,9 +77,9 @@ To test the equal function when the two numbers is combined with the operations 
   - `btnEqual.doClick()`
 
 - **Identify Parameters, Return Types, Return Values, and Exceptional Behavior**:
-  - **Parameters**: TypedNumber, SecondNumber, SelectedOperation
-  - **Return Type**: String
-  - **Return Value**: Result from selected parameter
+  - **Parameters**: `TypedNumber, SecondNumber, SelectedOperation`
+  - **Return Type**: `String`
+  - **Return Value**: `Result from selected parameter`
   - **Exceptional Behavior**: None
 
 - **Model the Input Domain**:
