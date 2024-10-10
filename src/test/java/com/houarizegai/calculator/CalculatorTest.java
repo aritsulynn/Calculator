@@ -312,6 +312,44 @@ a == 0:
 
     @Test
     public void testBackspace() {
+        //Functionality-based test cases
+        //t1 to check that "Back" button is on the screen
+        assertTrue(calculatorUI.btnBack != null);
+
+        //Interface based test: Multiple Base Coverage Criteria(MBCC)
+        //
+        //t1 ( True, Positive, 1-digit )
+        calculatorUI.inputScreen.setText("6");
+        calculatorUI.btnBack.doClick();
+        assertEquals("0", calculatorUI.inputScreen.getText());
+
+        //t2 ( True, Positive, Many digits )
+        calculatorUI.inputScreen.setText("25");
+        calculatorUI.btnBack.doClick();
+        assertEquals("2", calculatorUI.inputScreen.getText());
+
+        //t3 ( True, Negative, Many digits )
+        calculatorUI.inputScreen.setText("-14");
+        calculatorUI.btnBack.doClick();
+        assertEquals("-1", calculatorUI.inputScreen.getText());
+
+        //t4 ( True, Negative, 1-digit )
+        calculatorUI.inputScreen.setText("-8");
+        calculatorUI.btnBack.doClick();
+        assertEquals("-", calculatorUI.inputScreen.getText());
+        //
+        //END of Interface based test
+
+        //t2 to check that "Back" button is not on the screen
+        calculatorUI.btnBack = null;
+        assertTrue(calculatorUI.btnBack == null);
+        //
+        //END of Functionality based test
+
+        /*
+         * Copyright (C) 2024 Sarttra Prasongtichol - All Rights Reserved
+         * You may use, distribute and modify this code under the terms of the MIT license.
+         */
     }
 
 
