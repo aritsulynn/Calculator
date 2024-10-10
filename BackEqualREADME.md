@@ -8,7 +8,7 @@ To delete unnessecary number on the screen to fix the value of number.
 
 - **Identify Testable Functions**:
 
-  - `calculate()`
+  - `btnBack.doClick()`
 
 - **Identify Parameters, Return Types, Return Values, and Exceptional Behavior**:
 
@@ -74,7 +74,7 @@ To test the equal function when the two numbers is combined with the operations 
 
 ### Input Domain Modelling
 - **Identify Testable Functions**: 
-  - btnEqual.doClick()
+  - `btnEqual.doClick()`
 
 - **Identify Parameters, Return Types, Return Values, and Exceptional Behavior**:
   - **Parameters**: TypedNumber, SecondNumber, SelectedOperation
