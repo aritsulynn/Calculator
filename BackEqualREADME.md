@@ -31,7 +31,7 @@ To delete unnessecary number on the screen to fix the value of number.
 
       | **Characteristic**               | **b1**         | **b2**     |
       | -------------------------------- | -------------- | ---------- |
-      | _C1 = the value of number_         |   Positive | Negative |
+      | _C1 = the initial value of number_         |   Positive | Negative |
       | _C2 = the Digit of number_         |   1- digit | Many Digits  |
   - **Identify (possible) values**:
 
