@@ -497,7 +497,7 @@ To ensure that the clear button correctly resets all relevant fields.
     | T4 (True, NaN) | -1 | 0 |
     | T5 (False, NaN) | NaN | NaN |
 
-## (.) testDecimal()
+## 🗽⃢⃢🗿 ദ്ദി ˉ͈̀꒳ˉ͈́ )✧ testDecimal()
 
 ### Goal of test case:
 
