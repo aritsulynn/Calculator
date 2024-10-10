@@ -35,6 +35,12 @@ To delete unnessecary number on the screen to fix the value of number.
       | _C2 = the Digit of number_         |   1- digit | Many Digits  |
   - **Identify (possible) values**:
 
+    - **Interface-Based Characteristics**:
+
+      | **Characteristic**               | **b1** | **b2** | 
+      | -------------------------------- | ------ | ------ |
+      | _C1 = Number on the screen is shown_   | "12" | "" |
+
     - **Functionality-Based Characteristics**:
 
       | **Characteristic**           | **b1** | **b2** | **b3** |
@@ -42,11 +48,7 @@ To delete unnessecary number on the screen to fix the value of number.
       | _C1 = the value of number_  | 2      | 0      | -2     |
       |_C2 = the Digit of number_ | 3      | 25      |     |
 
-    - **Interface-Based Characteristics**:
 
-      | **Characteristic**               | **b1** | **b2** | 
-      | -------------------------------- | ------ | ------ |
-      | _C1 = Number on the screen is shown_   | "12" | "" |
 
 - **Combine partitions to define test requirements**:
 
