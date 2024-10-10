@@ -25,22 +25,22 @@ To delete unnessecary number on the screen to fix the value of number.
 
       | **Characteristic**           | **b1**         | **b2**     | 
       | ---------------------------- | -------------- | ---------- | 
-      | C1 = Number on the screen is shown   | True | False |
+      | _C1 = Number on the screen is shown_   | True | False |
 
     - **Functionality-Based Characteristics**:
 
       | **Characteristic**               | **b1**         | **b2**     | **b3**     |
       | -------------------------------- | -------------- | ---------- | ---------- | 
-      | C1 = the value of number         |   greater than 0 | equal to 0 | Less than 0 |
-      | C2 = the Digit of number         |   1- digits | Many Digits  |
+      | _C1 = the value of number_         |   greater than 0 | equal to 0 | Less than 0 |
+      | _C2 = the Digit of number_         |   1- digits | Many Digits  |
   - **Identify (possible) values**:
 
     - **Interface-Based Characteristics**:
 
       | **Characteristic**           | **b1** | **b2** | **b3** |
       | ---------------------------- | ------ | ------ | ------ |
-      | C1 = _value of firstNumber_  | 2      | 0      | -2     |
-      | C2 = _value of secondNumber_ | 3      | 0      | -3     |
+      | _C1 = the value of number_  | 2      | 0      | -2     |
+      |_C2 = the Digit of number_ | 3      | 25      |     |
 
     - **Functionality-Based Characteristics**:
 
