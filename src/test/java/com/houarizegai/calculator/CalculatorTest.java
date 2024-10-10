@@ -474,6 +474,142 @@ a == 0:
 
     @Test
     public void testEquals() {
+        //Functionality based test
+        //t1 the result is greater than 0
+        calculatorUI.typedValue = 8;
+        calculatorUI.selectedOperator = '+';
+        calculatorUI.inputScreen.setText("6");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("14", calculatorUI.inputScreen.getText());
+        //t2 the result is equal to 0
+        calculatorUI.typedValue = 5;
+        calculatorUI.selectedOperator = '*';
+        calculatorUI.inputScreen.setText("0");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("0", calculatorUI.inputScreen.getText());
+        //t3 the result is less than 0
+        calculatorUI.typedValue = 9;
+        calculatorUI.selectedOperator = '*';
+        calculatorUI.inputScreen.setText("-2");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("-18", calculatorUI.inputScreen.getText());
+        //t4 the result is Infinity
+        calculatorUI.typedValue = 1;
+        calculatorUI.selectedOperator = '/';
+        calculatorUI.inputScreen.setText("0");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("Infinity", calculatorUI.inputScreen.getText());
+        //t5 the result is -Infinity
+        calculatorUI.typedValue = -6;
+        calculatorUI.selectedOperator = '/';
+        calculatorUI.inputScreen.setText("0");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("-Infinity", calculatorUI.inputScreen.getText());
+        //t6 the result is NaN
+        calculatorUI.typedValue = 0;
+        calculatorUI.selectedOperator = '/';
+        calculatorUI.inputScreen.setText("0");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("NaN", calculatorUI.inputScreen.getText());
+        //
+        //END Functionality based test case
+
+        //Interface based test: Multiple Base Coverage Criteria(MBCC)
+        //Selected 2 Base: ( a > 0 , b > 0 , + ) , ( a > 0 , b < 0 , +)
+        //t1 ( a > 0, b > 0, + )
+        calculatorUI.typedValue = 5;
+        calculatorUI.selectedOperator = '+';
+        calculatorUI.inputScreen.setText("3");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("8", calculatorUI.inputScreen.getText()); // 5 + 3 = 8
+
+        //t2 ( a > 0, b > 0, - )
+        calculatorUI.typedValue = 7;
+        calculatorUI.selectedOperator = '-';
+        calculatorUI.inputScreen.setText("2");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("5", calculatorUI.inputScreen.getText()); // 7 - 2 = 5
+
+        //t3 ( a > 0, b > 0, * )
+        calculatorUI.typedValue = 2;
+        calculatorUI.selectedOperator = '*';
+        calculatorUI.inputScreen.setText("6");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("12", calculatorUI.inputScreen.getText()); // 2 * 6 = 12
+        //t4 ( a > 0, b > 0, / )
+        calculatorUI.typedValue = 18;
+        calculatorUI.selectedOperator = '/';
+        calculatorUI.inputScreen.setText("3");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("6", calculatorUI.inputScreen.getText()); // 18 / 3 = 6
+
+        //t5  ( a > 0, b > 0, ^ )
+        calculatorUI.typedValue = 4;
+        calculatorUI.selectedOperator = '^';
+        calculatorUI.inputScreen.setText("3");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("64", calculatorUI.inputScreen.getText()); // 4 ^ 3  = 64
+        //t6 ( a > 0, b > 0, %  )
+        calculatorUI.typedValue = 100;
+        calculatorUI.selectedOperator = '%';
+        calculatorUI.inputScreen.setText("10");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("0", calculatorUI.inputScreen.getText()); // 100 % 10 = 10
+        //t7 ( a < 0, b > 0, + )
+        calculatorUI.typedValue = -8;
+        calculatorUI.selectedOperator = '+';
+        calculatorUI.inputScreen.setText("10");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("2", calculatorUI.inputScreen.getText()); // -8 + 10 = 2
+        //t8 ( a > 0, b < 0, + )
+        calculatorUI.typedValue = 14;
+        calculatorUI.selectedOperator = '+';
+        calculatorUI.inputScreen.setText("-16");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("-2", calculatorUI.inputScreen.getText()); // 14 + (-16) = -2
+        //t9 ( a > 0, b < 0, - )
+        calculatorUI.typedValue = 9;
+        calculatorUI.selectedOperator = '-';
+        calculatorUI.inputScreen.setText("-2");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("11", calculatorUI.inputScreen.getText()); // 9 - (-2) = 11
+        //t10 ( a > 0, b < 0, * )
+        calculatorUI.typedValue = 5;
+        calculatorUI.selectedOperator = '*';
+        calculatorUI.inputScreen.setText("-7");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("-35", calculatorUI.inputScreen.getText()); // 5*(-7) = -35
+        //t11 ( a > 0, b < 0, / )
+        calculatorUI.typedValue = 27;
+        calculatorUI.selectedOperator = '/';
+        calculatorUI.inputScreen.setText("-9");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("-3", calculatorUI.inputScreen.getText()); // 27 /(-9) = -3
+        //t12 ( a > 0, b < 0, ^ )
+        calculatorUI.typedValue = 7;
+        calculatorUI.selectedOperator = '^';
+        calculatorUI.inputScreen.setText("-2");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("0.02040816326530612", calculatorUI.inputScreen.getText()); // 7 ^ (-2) = 0.02040816326530612
+        //t13 ( a < 0, b < 0, + )
+        calculatorUI.typedValue = -2;
+        calculatorUI.selectedOperator = '+';
+        calculatorUI.inputScreen.setText("-1");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("-3", calculatorUI.inputScreen.getText()); // -2 + (-1) = 3
+        //t14 ( a = 0, b < 0, + )
+        calculatorUI.typedValue = 0;
+        calculatorUI.selectedOperator = '+';
+        calculatorUI.inputScreen.setText("-4");
+        calculatorUI.btnEqual.doClick();
+        assertEquals("-4", calculatorUI.inputScreen.getText()); // 0+ (-4) = -4
+        //
+        //END Interface based test case
+
+        /*
+         * Copyright (C) 2024 Sarttra Prasongtichol - All Rights Reserved
+         * You may use, distribute and modify this code under the terms of the MIT license.
+         */
     }
 
 }
