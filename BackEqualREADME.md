@@ -29,39 +29,39 @@ To delete unnessecary number on the screen to fix the value of number.
 
     - **Functionality-Based Characteristics**:
 
-      | **Characteristic**               | **b1**         | **b2**     | **b3**     |
-      | -------------------------------- | -------------- | ---------- | ---------- | 
-      | _C1 = the value of number_         |   greater than 0 | equal to 0 | Less than 0 |
-      | _C2 = the Digit of number_         |   1- digits | Many Digits  |
+      | **Characteristic**               | **b1**         | **b2**     |
+      | -------------------------------- | -------------- | ---------- |
+      | _C1 = the value of number_         |   Positive | Negative |
+      | _C2 = the Digit of number_         |   1- digit | Many Digits  |
   - **Identify (possible) values**:
 
-    - **Interface-Based Characteristics**:
+    - **Functionality-Based Characteristics**:
 
       | **Characteristic**           | **b1** | **b2** | **b3** |
       | ---------------------------- | ------ | ------ | ------ |
       | _C1 = the value of number_  | 2      | 0      | -2     |
       |_C2 = the Digit of number_ | 3      | 25      |     |
 
-    - **Functionality-Based Characteristics**:
+    - **Interface-Based Characteristics**:
 
-      | **Characteristic**               | **b1** | **b2** | **b3** | **b4** | **b5**    |
-      | -------------------------------- | ------ | ------ | ------ | ------ | --------- |
-      | C1 = _result of the calculation_ | 8      | 1      | 0      | -0.125 | infiinity |
+      | **Characteristic**               | **b1** | **b2** | 
+      | -------------------------------- | ------ | ------ |
+      | _C1 = Number on the screen is shown_   | "12" | "" |
 
 - **Combine partitions to define test requirements**:
 
-  - **Assumption**: choose one value from each block
-  - **Test requirements**: number of tests (number of largest characteristic) = 5
+  - **Test requirements**: **2 base used** => 2 + ( 2 * (2 - 1) ) + ( 2 * (2 - 2) ) + ( 2 * (2 - 2) ) = **4 test cases**
 
 - **Derive test values and expected values**:
-  `Each Choice Coverage (ECC)`
-  | **Test** | **firstNumber** | **secondNumber** | **Expected result** |
-  |--------------------|---|---|---|
-  | T1 (>0, >0) | 2 | 3 | 8 |
-  | T2 (>0, 0) | 2 | 0 | 1 |
-  | T3 (0, >0) | 0 | 3 | 0 |
-  | T4 (<0, <0) | -2 | -3 | -0.125 |
-  | T5 (0, <0) | 0 | -3 | infinity |
+    **Selected Base:** ( True, Greater than 0 , 1-digit ), ( True, Less than 0 , Many Digits )
+     
+  | **Test** | **InputNumber** | **Expected result** |
+  |----------|-----------------|---------------------|
+  | T1 ( True, Greater than 0 , 1-digit )   | 6 | 0 |
+  | T2 ( True, Greater than 0 , Many digits ) | 25 | 2 |
+  | T3 ( True, Negative , Many digits ) | -14 | 1 |
+  | T4 ( True, Negative , 1-digit ) | -8 | 0 |
+
 ## = testEquals() 
 
 ### Goal of the test case:
