@@ -12,7 +12,7 @@ To delete unnessecary number on the screen to fix the value of number.
 
 - **Identify Parameters, Return Types, Return Values, and Exceptional Behavior**:
 
-  - **Parameters**: `firstNumber`, `secondNumber`, `operator`
+  - **Parameters**: `Number(String)`,
   - **Return Type**: `double`
   - **Return Value**: Result of the calculation
   - **Exceptional Behavior**:
