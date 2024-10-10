@@ -23,31 +23,31 @@ To delete unnessecary number on the screen to fix the value of number.
 
     - **Interface-Based Characteristics**:
 
-      | **Characteristic**           | **b1**         | **b2**     | 
-      | ---------------------------- | -------------- | ---------- | 
-      | _C1 = Button on the screen is visible_   | True | False |
-
-    - **Functionality-Based Characteristics**:
-
       | **Characteristic**               | **b1**         | **b2**     |
       | -------------------------------- | -------------- | ---------- |
       | _C1 = the initial value of number_         |   Positive | Negative |
       | _C2 = the Digit of number_         |   1- digit | Many Digits  |
-  - **Identify (possible) values**:
-
-    - **Interface-Based Characteristics**:
-
-      | **Characteristic**               | **b1** | **b2** | 
-      | -------------------------------- | ------ | ------ |
-      | _C1 = Button on the screen is visible_   | True | False |
 
     - **Functionality-Based Characteristics**:
 
+      | **Characteristic**           | **b1**         | **b2**     | 
+      | ---------------------------- | -------------- | ---------- | 
+      | _C1 = Button on the screen is visible_   | True | False |
+
+
+  - **Identify (possible) values**:
+
+    - **Interface-Based Characteristics**:
       | **Characteristic**           | **b1** | **b2** |
       | ---------------------------- | ------ | ------ | 
       | _C1 = the value of number_  | 2      | -2     |
       |_C2 = the Digit of number_ | 3      | 25      |
 
+    - **Functionality-Based Characteristics**:
+
+      | **Characteristic**               | **b1** | **b2** | 
+      | -------------------------------- | ------ | ------ |
+      | _C1 = Button on the screen is visible_   | True | False |
 
 
 - **Combine partitions to define test requirements**:
