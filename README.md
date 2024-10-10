@@ -303,8 +303,6 @@ To test the division functionality of the calculator to ensure it correctly divi
       | -------------------------------- | ------ | ------ | ------ | -------- | --------- | ------ |
       | C1 = _result of the calculation_ | 5      | 0      | -5     | infinity | -infinity | NaN    |
 
-- **Combine partitions to define test requirements**:
-  - **Test requirements**:
 
 ## 💪 testPower()
 
@@ -529,7 +527,7 @@ To test the decimal functionality of the calculator to ensure it correctly displ
       | **Characteristic**           | **b1**                 | **b2**             | **b3**              | **b4**                   | **b5**               | **b6**                | **b7**                             | **b8**                              |
       | ---------------------------- | ---------------------- | ------------------ | ------------------- | ------------------------ | -------------------- | --------------------- | ---------------------------------- | ----------------------------------- |
       | C1 = _value of firstNumber_  | integer greater than 0 | integer equal to 0 | integer less than 0 | decimal greater than 0.0 | decimal equal to 0.0 | decimal less than 0.0 | Not a Number (addToDisplay = true) | Not a Number (addToDisplay = false) |
-      | C2 = _value of secondNumber_ | integer greater than 0 | integer equal to 0 | integer less than 0 | decimal greater than 0.0 | decimal equal to 0.0 | decimal less than 0.0 | Not a Number (addToDisplay = true) | Not a Number (addToDisplay = false) |
+
 
     - **Functionality-Based Characteristics**:
 
@@ -544,12 +542,11 @@ To test the decimal functionality of the calculator to ensure it correctly displ
   | **Characteristic**           | **b1** | **b2** | **b3** | **b4** | **b5** | **b6** | **b7**                      | **b8**                     |
   | ---------------------------- | ------ | ------ | ------ | ------ | ------ | ------ | --------------------------- | -------------------------- |
   | C1 = _value of firstNumber_  | 5      | 0      | -5     | 5.0    | 0.0    | -5.0   | Hello (addToDisplay = true) | NaN (addToDisplay = false) |
-  | C2 = _value of secondNumber_ | 5      | 0      | -5     | 5.0    | 0.0    | -5.0   | Hello (addToDisplay = true) | NaN (addToDisplay = false) |
+
 
   - **Functionality-Based Characteristics**:
     | **Characteristic** | **b1** | **b2** | **b3** |
     | -------------------------------- | ------ | ------- | ------ |
     | C1 = _result of the calculation_ | 5 to 5 | 5 to 5. | 0. |
 
-- **Combine partitions to define test requirements**:
-  - **Test requirements**:
+
