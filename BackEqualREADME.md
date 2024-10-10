@@ -13,12 +13,9 @@ To delete unnessecary number on the screen to fix the value of number.
 - **Identify Parameters, Return Types, Return Values, and Exceptional Behavior**:
 
   - **Parameters**: `Number(String)`,
-  - **Return Type**: `double`
-  - **Return Value**: Result of the calculation
-  - **Exceptional Behavior**:
-    - **Non-Numeric Input**: If any input is non-numeric, an error should be thrown.
-    - **Fraction Input**: If fractions like `1/2` are entered, the system will reject it and throw an error since fractions are not supported. Decimal equivalents (like `0.5`) are allowed.
-    - **Zero Raised to Negative Power**: If `firstNumber` is `0` and `secondNumber` is negative, the result will be infinity.
+  - **Return Type**: `String`
+  - **Return Value**: `New Number`
+  - **Exceptional Behavior**:None
 
 - **Model the Input Domain**:
 
@@ -35,7 +32,7 @@ To delete unnessecary number on the screen to fix the value of number.
       | **Characteristic**               | **b1**         | **b2**     | **b3**     |
       | -------------------------------- | -------------- | ---------- | ---------- | 
       | C1 = the value of number         |   greater than 0 | equal to 0 | Less than 0 |
-      | C2 = the Digit of number         |   1- digits | 2 digits | Many Digits  |
+      | C2 = the Digit of number         |   1- digits | Many Digits  |
   - **Identify (possible) values**:
 
     - **Interface-Based Characteristics**:
@@ -65,7 +62,7 @@ To delete unnessecary number on the screen to fix the value of number.
   | T3 (0, >0) | 0 | 3 | 0 |
   | T4 (<0, <0) | -2 | -3 | -0.125 |
   | T5 (0, <0) | 0 | -3 | infinity |
-## (=) testEquals() 
+## = testEquals() 
 
 ### Goal of the test case:
 To test the equal function when the two numbers is combined with the operations successfully.
