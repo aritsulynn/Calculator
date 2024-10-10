@@ -310,6 +310,10 @@ a == 0:
     public void testModulo() {
     }
 
+    /*
+    * Copyright (C) 2024 Sarttra Prasongtichol - All Rights Reserved
+    * You may use, distribute and modify this code under the terms of the MIT license.
+    */
     @Test
     public void testBackspace() {
         //Functionality-based test cases
@@ -346,10 +350,7 @@ a == 0:
         //
         //END of Functionality based test
 
-        /*
-         * Copyright (C) 2024 Sarttra Prasongtichol - All Rights Reserved
-         * You may use, distribute and modify this code under the terms of the MIT license.
-         */
+       
     }
 
 
@@ -471,7 +472,10 @@ a == 0:
 
     }
 
-
+    /*
+    * Copyright (C) 2024 Sarttra Prasongtichol - All Rights Reserved
+    * You may use, distribute and modify this code under the terms of the MIT license.
+    */
     @Test
     public void testEquals() {
         //Functionality based test
@@ -606,10 +610,6 @@ a == 0:
         //
         //END Interface based test case
 
-        /*
-         * Copyright (C) 2024 Sarttra Prasongtichol - All Rights Reserved
-         * You may use, distribute and modify this code under the terms of the MIT license.
-         */
     }
 
 }
