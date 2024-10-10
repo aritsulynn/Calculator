@@ -30,7 +30,7 @@ public class CalculatorUI {
     private JComboBox<String> comboTheme;
     public JTextField inputScreen;
     public JButton btnC;
-    private JButton btnBack;
+    public JButton btnBack;
     private JButton btnMod;
     private JButton btnDiv;
     private JButton btnMul;
@@ -47,15 +47,15 @@ public class CalculatorUI {
     private JButton btn8;
     private JButton btn9;
     public JButton btnPoint;
-    private JButton btnEqual;
+    public JButton btnEqual;
     private JButton btnRoot;
     private JButton btnPower;
     private JButton btnLog;
 
-    private char selectedOperator = ' ';
+    public char selectedOperator = ' ';
     private boolean go = true; // For calculate with Opt != (=)
     public boolean addToDisplay = true; // Connect numbers in display
-    private double typedValue = 0;
+    public double typedValue = 0;
 
     private final Map<String, Theme> themesMap;
 
