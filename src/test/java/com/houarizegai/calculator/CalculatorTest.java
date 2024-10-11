@@ -302,14 +302,99 @@ a == 0:
         assertEquals(Double.POSITIVE_INFINITY, calculatorUI.calculate(0,-3,'^'));  
     }
 
-    @Test
+    @Test  //pat
     public void testNaturalLogarithm() {
+
+       // Test1: positive numbers (ACoC)
+       assertEquals(0.0, Math.log(1), 0.0001);
+        assertEquals(Math.log(3), Math.log(3), 0.0001);
+        assertEquals(Math.log(5), Math.log(5), 0.0001);
+
+       // Test2: numbers less than 1 (ACoC)
+       assertEquals(Math.log(0.5), Math.log(0.5), 0.0001);
+       assertEquals(Math.log(0.25), Math.log(0.25), 0.0001);
+       assertEquals(Math.log(0.75), Math.log(0.75), 0.0001);
+
+       // Test3: zero (ECC)
+       assertTrue(Double.isInfinite(Math.log(0)));
+
+       // Test4: negative numbers (ECC)
+       assertTrue(Double.isNaN(Math.log(-1)));
+       assertTrue(Double.isNaN(Math.log(-2)));
+
+       // Test5:very large numbers (PWC)
+       assertEquals(Math.log(10000), Math.log(10000), 0.0001);
+       assertEquals(Math.log(100000), Math.log(100000), 0.0001);
+
+       // Test6:  very small numbers close to zero (PWC)
+       assertEquals(Math.log(0.01), Math.log(0.01), 0.0001);
+       assertEquals(Math.log(0.001), Math.log(0.001), 0.0001);
+
+       // Test7: boundary value around 1 (BCC)
+       assertEquals(Math.log(1.1), Math.log(1.1), 0.001);
+       assertEquals(Math.log(0.9), Math.log(0.9), 0.001);
+
+       // Test8: boundary value around e (BCC)
+       assertEquals(Math.log(3), Math.log(3), 0.0001);
+       assertEquals(Math.log(2.5), Math.log(2.5), 0.0001);
+
+       // Test9: input very close to zero and positive (MBCC)
+       assertEquals(Math.log(0.001), Math.log(0.001), 0.0001);
+       assertEquals(Math.log(0.0001), Math.log(0.0001), 0.0001);
+
+       // Test10: extremely large numbers (MBCC)
+       assertEquals(Math.log(1000000), Math.log(1000000), 0.0001);
+       assertEquals(Math.log(10000000), Math.log(10000000), 0.0001);
+
     }
-    //pat
-    @Test
+    
+    @Test  //pat
     public void testModulo() {
+         
+        // Test1: Positive dividend and positive divisor (ACoC)
+        assertEquals(1, 5 % 2);
+        assertEquals(2, 10 % 4);
+        assertEquals(0, 6 % 3);
+
+        // Test2: Positive dividend and negative divisor (ACoC)
+        assertEquals(1, 5 % -2);
+        assertEquals(2, 10 % -4);
+        assertEquals(0, 6 % -3);
+
+        // Test3: Dividend of zero (ECC)
+        assertEquals(0, 0 % 3);
+        assertEquals(0, 0 % -3);
+
+        // Test4: Negative dividend and positive divisor (ECC)
+        assertEquals(-1, -5 % 2);
+        assertEquals(-2, -10 % 4);
+
+        // Test5: Negative dividend and negative divisor (PWC)
+        assertEquals(-1, -5 % -2);
+        assertEquals(-2, -10 % -4);
+
+        // Test6: Divisor greater than dividend (PWC)
+        assertEquals(5, 5 % 7);
+        assertEquals(-5, -5 % 7);
+
+        // Test7: Divisor of one (BCC)
+        assertEquals(0, 7 % 1);
+        assertEquals(0, -7 % 1);
+
+        // Test8: Divisor of negative one (BCC)
+        assertEquals(0, 7 % -1);
+        assertEquals(0, -7 % -1);
+
+        // Test9: Large dividend and small divisor (MBCC)
+        assertEquals(1, 21 % 2);
+        assertEquals(0, 20 % 2);
+
+        // Test10: Small dividend and large divisor (MBCC)
+        assertEquals(3, 3 % 50);
+        assertEquals(-3, -3 % 50);
+
     }
-    //pat
+
     /*
     * Copyright (C) 2024 Sarttra Prasongtichol - All Rights Reserved
     * You may use, distribute and modify this code under the terms of the MIT license.
