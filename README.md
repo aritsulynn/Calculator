@@ -494,8 +494,8 @@ The input domain is modeled based on the following **Interface-Based** and **Fun
 
 By using the **Pairwise Coverage (PWC)** technique, the following test cases are derived:
 
-| **Test**  | **Input**  | **Input Type** | **Expected Result** | **Explanation**                                                |
-|-----------|------------|----------------|---------------------|----------------------------------------------------------------|
+| **Test**  | **Input**  | **Input Type** | **Expected Result** | 
+|-----------|------------|----------------|---------------------|
 | Test 1    | `0.5`      | Decimal        | `-0.693`            | 
 | Test 2    | `1`        | Integer        | `0`                 | 
 | Test 3    | `100`      | Integer        | `4.605`             | 
@@ -543,8 +543,8 @@ This test suite evaluates the modulo (`%`) operation using **Pairwise Coverage (
 
 ## Test Cases
 
-| **Test Number** | **Input (Dividend, Divisor)** | **Expected Output** | **Explanation**                                                                 |
-|-----------------|-------------------------------|---------------------|---------------------------------------------------------------------------------|
+| **Test Number** | **Input (Dividend, Divisor)** | **Expected Output** |                                                            |
+|-----------------|-------------------------------|---------------------|
 | 1               | `(3, 8)`                      | `3`                 | 
 | 2               | `(-3, 8)`                     | `-3`                | 
 | 3               | `(3, -8)`                     | `3`                 | 
