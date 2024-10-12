@@ -430,47 +430,82 @@ To test the square root functionality of the calculator to ensure it correctly c
   | T6 (negative input) | "-81"           | NaN                 |
 
 
-## testNaturalLogarithm()
+## ▶️testNaturalLogarithm()
 
-### Goal of test case:
+### Goal of the Test Case:
 
-To test that the calculator correctly compute the natural logarithm (ln) of a given .
+To check the calculator correctly computes the natural logarithm (`ln`).
 
-### Input Domain Modelling
+---
 
-- **Identify Testable Functions**:
-
-  - ``
-
-- **Identify Parameters, Return Types, Return Values, and Exceptional Behavior**:
-
-  - **Parameters**: ``
-
-- **Model the Input Domain**:
-
-  - **Partition Characteristics**:
-
-    - **Interface-Based Characteristics**:
-
-      | **Characteristic**          | **b1**         | **b2** | **b3**        |
- 
-
-  - **Identify (possible) values**:
-
-    - **Interface-Based Characteristics**:
-
-      | **Characteristic**          | **b1** | **b2** | **b3**        |
+### Input Domain Modelling:
   
+#### Identify Parameters, Return Types, Return Values, and Exceptional Behavior:
 
-- **Combine partitions to define test requirements**:
+- **Parameters**: 
+  - A single numeric input (integer or decimal) for which the natural logarithm will be calculated.
 
-  - **Test requirements**: number
+- **Return Type**: 
+  - A floating-point number representing the logarithm of the input value.
 
-- **Derive test values and expected values**:
-  `PWC` Technique
+- **Return Values**:
+  - Negative result for inputs between `0` and `1`.
+  - Zero result for input `1`.
+  - Positive result for inputs greater than `1`.
+  - Undefined (e.g., `NaN`, `Error`, or `-Infinity`) for `ln(0)` or invalid inputs.
 
-  | **Test**            | **inputNumber** | **Expected result** |
+---
 
+### Model the Input Domain:
+
+#### Partition Characteristics:
+
+The input domain is modeled based on the following **Interface-Based** and **Function-Based** characteristics:
+
+##### Interface-Based Characteristics:
+- **Input Type**: Integer or Decimal.
+- **Input Magnitude**: Small, Medium, or Large numbers.
+- **Special Cases**: Specific cases like `ln(0)` and `ln(e)`.
+
+##### Function-Based Characteristics:
+- **Output Type**: Negative, Zero, Positive, or Undefined results.
+
+---
+
+### Identify (possible) values:
+
+#### Interface-Based Characteristics:
+
+| **Characteristic** | **b1**: Small Input | **b2**: Medium Input | **b3**: Large Input |
+|--------------------|---------------------|----------------------|---------------------|
+| Input Type         | Decimal             | Integer              | Decimal             |
+| Input Magnitude    | Small               | Medium               | Large               |
+| Special Case       | `ln(0)`, `ln(e)`    | `ln(1)`              | `ln(>1)`            |
+
+#### Function-Based Characteristics:
+
+| **Characteristic** | **b1**: Negative Result | **b2**: Zero Result | **b3**: Positive Result | **b4**: Undefined Result |
+|--------------------|-------------------------|---------------------|-------------------------|--------------------------|
+| Output Type        | Negative for inputs < 1  | Zero for input `1`  | Positive for inputs > 1 | Undefined for `ln(0)`    |
+
+---
+
+### Derive Test Values and Expected Values:
+
+By using the **Pairwise Coverage (PWC)** technique, the following test cases are derived:
+
+| **Test**  | **Input**  | **Input Type** | **Expected Result** | **Explanation**                                                |
+|-----------|------------|----------------|---------------------|----------------------------------------------------------------|
+| Test 1    | `0.5`      | Decimal        | `-0.693`            | 
+| Test 2    | `1`        | Integer        | `0`                 | 
+| Test 3    | `100`      | Integer        | `4.605`             | 
+| Test 4    | `e`        | Decimal        | `1`                 | 
+| Test 5    | `0.0001`   | Decimal        | `-9.210`            | 
+| Test 6    | `1000000.5`| Decimal        | `13.816`            | 
+| Test 7    | `5`        | Integer        | `1.609`             | 
+| Test 8    | `0`        | Integer        | `NaN` or `-Infinity`| 
+| Test 9    | `123.45`   | Decimal        | `4.816`             | 
+| Test 10   | `3.14`     | Decimal        | `1.144`             | 
 
 ## % testModulo()
 
@@ -510,16 +545,16 @@ This test suite evaluates the modulo (`%`) operation using **Pairwise Coverage (
 
 | **Test Number** | **Input (Dividend, Divisor)** | **Expected Output** | **Explanation**                                                                 |
 |-----------------|-------------------------------|---------------------|---------------------------------------------------------------------------------|
-| 1               | `(3, 8)`                      | `3`                 | Positive dividend and positive divisor, divisor larger than dividend (b1)        |
-| 2               | `(-3, 8)`                     | `-3`                | Negative dividend, positive divisor, divisor larger than dividend (b2)           |
-| 3               | `(3, -8)`                     | `3`                 | Positive dividend, negative divisor, divisor larger than dividend (b3)           |
-| 4               | `(-3, -8)`                    | `-3`                | Negative dividend, negative divisor, divisor larger than dividend (b4)           |
-| 5               | `(4, 4)`                      | `0`                 | Dividend equals divisor, positive values (b1)                                    |
-| 6               | `(-4, -4)`                    | `0`                 | Dividend equals divisor, negative values (b2). Adjusted for `-0.0` case handling |
-| 7               | `(9, 4)`                      | `1`                 | Dividend greater than divisor, both positive (b2)                                |
-| 8               | `(-9, -4)`                    | `-1`                | Dividend greater than divisor, both negative (b3)                                |
-| 9               | `(-3, -7)`                    | `-3`                | Dividend less than divisor, both negative (b4)                                   |
-| 10              | `(10, 4)`                     | `2`                 | Positive dividend and positive divisor, both even numbers (b4)                   |
+| 1               | `(3, 8)`                      | `3`                 | 
+| 2               | `(-3, 8)`                     | `-3`                | 
+| 3               | `(3, -8)`                     | `3`                 | 
+| 4               | `(-3, -8)`                    | `-3`                | 
+| 5               | `(4, 4)`                      | `0`                 | 
+| 6               | `(-4, -4)`                    | `0`                 | 
+| 7               | `(9, 4)`                      | `1`                 | 
+| 8               | `(-9, -4)`                    | `-1`                | 
+| 9               | `(-3, -7)`                    | `-3`                | 
+| 10              | `(10, 4)`                     | `2`                 | 
 
 
 
