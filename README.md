@@ -434,23 +434,17 @@ To test the square root functionality of the calculator to ensure it correctly c
 
 ### Goal of test case:
 
-To test that the calculator correctly compute the natural logarithm (ln) of a given number.
+To test that the calculator correctly compute the natural logarithm (ln) of a given .
 
 ### Input Domain Modelling
 
 - **Identify Testable Functions**:
 
-  - `calculateSquareRoot()`
+  - ``
 
 - **Identify Parameters, Return Types, Return Values, and Exceptional Behavior**:
 
-  - **Parameters**: `inputNumber`
-  - **Return Type**: `double`
-  - **Return Value**: Result of the square root calculation
-  - **Exceptional Behavior**:
-    - **Non-Numeric Input**: If the input is non-numeric (like a string or special character), it should return the same string or throw an error.
-    - **Negative Input**: If the input is a negative number, it should return `NaN` as square roots of negative numbers are undefined in the real number system.
-    - **Empty Input**: If the input is an empty string, it should return "".
+  - **Parameters**: ``
 
 - **Model the Input Domain**:
 
@@ -472,19 +466,14 @@ To test that the calculator correctly compute the natural logarithm (ln) of a gi
 
 - **Combine partitions to define test requirements**:
 
-  - **Test requirements**: number of tests (number of largest characteristic) = 5
+  - **Test requirements**: number
 
 - **Derive test values and expected values**:
-  `ACoC` Technique
+  `PWC` Technique
 
   | **Test**            | **inputNumber** | **Expected result** |
   | ------------------- | --------------- | ------------------- |
   | T1 (valid positive) | "49"            | 7                   |
-  | T2 (zero input)     | "0"             | 0                   |
-  | T3 (null input)     | null            | null                |
-  | T4 (empty input)    | ""              | ""                  |
-  | T5 (invalid input)  | "Hello World"   | "Hello World"       |
-  | T6 (negative input) | "-81"           | NaN                 |
 
 ## ⬅️ testBackSpace()
 

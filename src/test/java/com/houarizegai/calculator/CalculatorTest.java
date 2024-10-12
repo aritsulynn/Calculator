@@ -304,95 +304,133 @@ a == 0:
 
     @Test  //pat
     public void testNaturalLogarithm() {
+    /* 
+    PWC : Pair Wise Coverage
+    Interface-based Testing 
+    - Input type : Integer or Decimal
+    
+    Function-based Testing
+    - Output type: Negative, Zero, Positive, Undefined
 
-       // Test1: positive numbers (ACoC)
-       assertEquals(0.0, Math.log(1), 0.0001);
-        assertEquals(Math.log(3), Math.log(3), 0.0001);
-        assertEquals(Math.log(5), Math.log(5), 0.0001);
+    Testcase 
+    - 1.decimal input and negative output
+    - 2.integer input and zero output
+    - 3.Larg integer input with a positive output
+    - 4.Decimal (e) input, Positive output
+    - 5.Decimal (close to zero) and Negative output
+    - 6.large decimal input and a positive output
+    - 7.Medium integer input with a positive output
+    - 8.small integer input (0) with an undefined output
+    - 9.large decimal input and a positive output
+    - 10.medium decimal input with a positive output
 
-       // Test2: numbers less than 1 (ACoC)
-       assertEquals(Math.log(0.5), Math.log(0.5), 0.0001);
-       assertEquals(Math.log(0.25), Math.log(0.25), 0.0001);
-       assertEquals(Math.log(0.75), Math.log(0.75), 0.0001);
+    I Use delta to allowing small precision differences
+     */
+    calculatorUI.inputScreen.setText("0.5");
+    calculatorUI.btnLog.doClick();
+    double expected1 = -0.693;
+    double actual1 = Double.parseDouble(calculatorUI.inputScreen.getText());
+    assertEquals(expected1, actual1, 0.001);
 
-       // Test3: zero (ECC)
-       assertTrue(Double.isInfinite(Math.log(0)));
+    calculatorUI.inputScreen.setText("1");
+    calculatorUI.btnLog.doClick();
+    double expected2 = 0.0;
+    double actual2 = Double.parseDouble(calculatorUI.inputScreen.getText());
+    assertEquals(expected2, actual2, 0.001);
 
-       // Test4: negative numbers (ECC)
-       assertTrue(Double.isNaN(Math.log(-1)));
-       assertTrue(Double.isNaN(Math.log(-2)));
+    calculatorUI.inputScreen.setText("100");
+    calculatorUI.btnLog.doClick();
+    double expected3 = 4.605;
+    double actual3 = Double.parseDouble(calculatorUI.inputScreen.getText());
+    assertEquals(expected3, actual3, 0.001);
 
-       // Test5:very large numbers (PWC)
-       assertEquals(Math.log(10000), Math.log(10000), 0.0001);
-       assertEquals(Math.log(100000), Math.log(100000), 0.0001);
 
-       // Test6:  very small numbers close to zero (PWC)
-       assertEquals(Math.log(0.01), Math.log(0.01), 0.0001);
-       assertEquals(Math.log(0.001), Math.log(0.001), 0.0001);
+    calculatorUI.inputScreen.setText(Double.toString(Math.E));
+    calculatorUI.btnLog.doClick();
+    double expected4 = 1.0;
+    double actual4 = Double.parseDouble(calculatorUI.inputScreen.getText());
+    assertEquals(expected4, actual4, 0.001);
 
-       // Test7: boundary value around 1 (BCC)
-       assertEquals(Math.log(1.1), Math.log(1.1), 0.001);
-       assertEquals(Math.log(0.9), Math.log(0.9), 0.001);
+    calculatorUI.inputScreen.setText("0.0001");
+    calculatorUI.btnLog.doClick();
+    double expected5 = -9.210;
+    double actual5 = Double.parseDouble(calculatorUI.inputScreen.getText());
+    assertEquals(expected5, actual5, 0.001);
 
-       // Test8: boundary value around e (BCC)
-       assertEquals(Math.log(3), Math.log(3), 0.0001);
-       assertEquals(Math.log(2.5), Math.log(2.5), 0.0001);
+    calculatorUI.inputScreen.setText("1000000.5");
+    calculatorUI.btnLog.doClick();
+    double expected6 = 13.816;
+    double actual6 = Double.parseDouble(calculatorUI.inputScreen.getText());
+    assertEquals(expected6, actual6, 0.001);
 
-       // Test9: input very close to zero and positive (MBCC)
-       assertEquals(Math.log(0.001), Math.log(0.001), 0.0001);
-       assertEquals(Math.log(0.0001), Math.log(0.0001), 0.0001);
+    calculatorUI.inputScreen.setText("5");
+    calculatorUI.btnLog.doClick();
+    double expected7 = 1.609;
+    double actual7 = Double.parseDouble(calculatorUI.inputScreen.getText());
+    assertEquals(expected7, actual7, 0.001);
 
-       // Test10: extremely large numbers (MBCC)
-       assertEquals(Math.log(1000000), Math.log(1000000), 0.0001);
-       assertEquals(Math.log(10000000), Math.log(10000000), 0.0001);
+    calculatorUI.inputScreen.setText("0");
+    calculatorUI.btnLog.doClick();
+    String output = calculatorUI.inputScreen.getText().trim();
+    assertTrue(output.equalsIgnoreCase("NaN") || output.equalsIgnoreCase("Error") || output.equalsIgnoreCase("-Infinity"));
 
+    calculatorUI.inputScreen.setText("123.45");
+    calculatorUI.btnLog.doClick();
+    double expected9 = 4.816;
+    double actual9 = Double.parseDouble(calculatorUI.inputScreen.getText());
+    assertEquals(expected9, actual9, 0.001);
+
+    calculatorUI.inputScreen.setText("3.14");
+    calculatorUI.btnLog.doClick();
+    double expected10 = 1.144;
+    double actual10 = Double.parseDouble(calculatorUI.inputScreen.getText());
+    assertEquals(expected10, actual10, 0.001);
     }
     
     @Test  //pat
     public void testModulo() {
-         
-       // Test1: Positive dividend and positive divisor (ACoC)
-       assertEquals(calculatorUI.calculate(5, 2, '%'), 1, 0.0001);
-       assertEquals(calculatorUI.calculate(10, 4, '%'), 2, 0.0001);
-       assertEquals(calculatorUI.calculate(6, 3, '%'), 0, 0.0001);
+   /* 
+   PWC : Pair Wise Coverage
+   Interface based : 
+    - 1.Positive dividend and positive divisor, larger divisor 
+    - 2.Negative dividend and positive divisor, divisor larger
+    - 3.Positive dividend and negative divisor, divisor larger
+    - 4.Negative dividend and negative divisor, divisor larger
+    */
 
-       // Test2: Positive dividend and negative divisor (ACoC)
-       assertEquals(calculatorUI.calculate(5, -2, '%'), 1, 0.0001);
-       assertEquals(calculatorUI.calculate(10, -4, '%'), 2, 0.0001);
-       assertEquals(calculatorUI.calculate(6, -3, '%'), 0, 0.0001);
+   assertEquals(calculatorUI.calculate(3, 8, '%'), 3); //1
 
-       // Test3: Dividend of zero (ECC)
-       assertEquals(calculatorUI.calculate(0, 3, '%'), 0, 0.0001);
-       assertEquals(calculatorUI.calculate(0, -3, '%'), 0, 0.0001);
+   assertEquals(calculatorUI.calculate(-3, 8, '%'), -3); //2
 
-       // Test4: Negative dividend and positive divisor (ECC)
-       assertEquals(calculatorUI.calculate(-5, 2, '%'), -1, 0.0001);
-       assertEquals(calculatorUI.calculate(-10, 4, '%'), -2, 0.0001);
+   assertEquals(calculatorUI.calculate(3, -8, '%'), 3); //3
 
-       // Test5: Negative dividend and negative divisor (PWC)
-       assertEquals(calculatorUI.calculate(-5, -2, '%'), -1, 0.0001);
-       assertEquals(calculatorUI.calculate(-10, -4, '%'), -2, 0.0001);
+   assertEquals(calculatorUI.calculate(-3, -8, '%'), -3); //4
 
-       // Test6: Divisor greater than dividend (PWC)
-       assertEquals(calculatorUI.calculate(5, 7, '%'), 5, 0.0001);
-       assertEquals(calculatorUI.calculate(-5, 7, '%'), -5, 0.0001);
+    /* 
+    Function-based:
+    - 5.Dividend equal to divisor, positive values
+    - 6.Dividend equal to divisor, negative values
+    - 7.Dividend greater than divisor, both positive
+    - 8.Dividend greater than divisor, both negative
+    - 9.Dividend less than divisor, both negative
+    - 10.Positive dividend and positive divisor, both even numbers
+     */
 
-       // Test7: Divisor of one (BCC)
-       assertEquals(calculatorUI.calculate(7, 1, '%'), 0, 0.0001);
-       assertEquals(calculatorUI.calculate(-7, 1, '%'), 0, 0.0001);
+   assertEquals(calculatorUI.calculate(4, 4, '%'), 0); //5
 
-       // Test8: Divisor of negative one (BCC)
-       assertEquals(calculatorUI.calculate(7, -1, '%'), 0, 0.0001);
-       assertEquals(calculatorUI.calculate(-7, -1, '%'), 0, 0.0001);
+   double result = calculatorUI.calculate(-4, -4, '%'); 
+   if (result == -0.0) {
+       result = 0.0; 
+   } // to catch problem from the output that expected 0.0 and actual output are -0.0 so actually -0.0 is equal to 0.0 
+   assertEquals(0.0, result); //6
 
-       // Test9: Large dividend and small divisor (MBCC)
-       assertEquals(calculatorUI.calculate(21, 2, '%'), 1, 0.0001);
-       assertEquals(calculatorUI.calculate(20, 2, '%'), 0, 0.0001);
+   assertEquals(calculatorUI.calculate(9, 4, '%'), 1); //7
 
-       // Test10: Small dividend and large divisor (MBCC)
-       assertEquals(calculatorUI.calculate(3, 50, '%'), 3, 0.0001);
-       assertEquals(calculatorUI.calculate(-3, 50, '%'), -3, 0.0001);
+   assertEquals(calculatorUI.calculate(-9, -4, '%'), -1); //8
 
+   assertEquals(calculatorUI.calculate(-3, -7, '%'), -3); //9
+
+   assertEquals(calculatorUI.calculate(10, 4, '%'), 2); //10
     }
 
     /*

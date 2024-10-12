@@ -50,7 +50,7 @@ public class CalculatorUI {
     public JButton btnEqual;
     private JButton btnRoot;
     private JButton btnPower;
-    private JButton btnLog;
+    public JButton btnLog;
 
     public char selectedOperator = ' ';
     private boolean go = true; // For calculate with Opt != (=)
