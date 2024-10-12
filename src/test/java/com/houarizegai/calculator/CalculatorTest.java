@@ -301,8 +301,11 @@ a == 0:
         assertEquals(-0.125, calculatorUI.calculate(-2, -3, '^'));
         assertEquals(Double.POSITIVE_INFINITY, calculatorUI.calculate(0,-3,'^'));  
     }
-
-    @Test  //pat
+    /*
+    * Copyright (C) 2024 Pattaravit Suksri - All Rights Reserved
+    * You may use, distribute and modify this code under the terms of the MIT license.
+    */
+    @Test  
     public void testNaturalLogarithm() {
     /* 
     PWC : Pair Wise Coverage
@@ -387,7 +390,11 @@ a == 0:
     assertEquals(expected10, actual10, 0.001);
     }
     
-    @Test  //pat
+    /*
+    * Copyright (C) 2024 Pattaravit Suksri - All Rights Reserved
+    * You may use, distribute and modify this code under the terms of the MIT license.
+    */
+    @Test  
     public void testModulo() {
    /* 
    PWC : Pair Wise Coverage

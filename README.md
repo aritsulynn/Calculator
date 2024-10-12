@@ -453,16 +453,14 @@ To test that the calculator correctly compute the natural logarithm (ln) of a gi
     - **Interface-Based Characteristics**:
 
       | **Characteristic**          | **b1**         | **b2** | **b3**        |
-      | --------------------------- | -------------- | ------ | ------------- |
-      | C1 = _value of inputNumber_ | valid positive | zero   | invalid input |
+ 
 
   - **Identify (possible) values**:
 
     - **Interface-Based Characteristics**:
 
       | **Characteristic**          | **b1** | **b2** | **b3**        |
-      | --------------------------- | ------ | ------ | ------------- |
-      | C1 = _value of inputNumber_ | 49     | 0      | "Hello World" |
+  
 
 - **Combine partitions to define test requirements**:
 
@@ -472,8 +470,7 @@ To test that the calculator correctly compute the natural logarithm (ln) of a gi
   `PWC` Technique
 
   | **Test**            | **inputNumber** | **Expected result** |
-  | ------------------- | --------------- | ------------------- |
-  | T1 (valid positive) | "49"            | 7                   |
+
 
 ## ⬅️ testBackSpace()
 
