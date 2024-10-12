@@ -351,47 +351,47 @@ a == 0:
     @Test  //pat
     public void testModulo() {
          
-        // Test1: Positive dividend and positive divisor (ACoC)
-        assertEquals(1, 5 % 2);
-        assertEquals(2, 10 % 4);
-        assertEquals(0, 6 % 3);
+       // Test1: Positive dividend and positive divisor (ACoC)
+       assertEquals(calculatorUI.calculate(5, 2, '%'), 1, 0.0001);
+       assertEquals(calculatorUI.calculate(10, 4, '%'), 2, 0.0001);
+       assertEquals(calculatorUI.calculate(6, 3, '%'), 0, 0.0001);
 
-        // Test2: Positive dividend and negative divisor (ACoC)
-        assertEquals(1, 5 % -2);
-        assertEquals(2, 10 % -4);
-        assertEquals(0, 6 % -3);
+       // Test2: Positive dividend and negative divisor (ACoC)
+       assertEquals(calculatorUI.calculate(5, -2, '%'), 1, 0.0001);
+       assertEquals(calculatorUI.calculate(10, -4, '%'), 2, 0.0001);
+       assertEquals(calculatorUI.calculate(6, -3, '%'), 0, 0.0001);
 
-        // Test3: Dividend of zero (ECC)
-        assertEquals(0, 0 % 3);
-        assertEquals(0, 0 % -3);
+       // Test3: Dividend of zero (ECC)
+       assertEquals(calculatorUI.calculate(0, 3, '%'), 0, 0.0001);
+       assertEquals(calculatorUI.calculate(0, -3, '%'), 0, 0.0001);
 
-        // Test4: Negative dividend and positive divisor (ECC)
-        assertEquals(-1, -5 % 2);
-        assertEquals(-2, -10 % 4);
+       // Test4: Negative dividend and positive divisor (ECC)
+       assertEquals(calculatorUI.calculate(-5, 2, '%'), -1, 0.0001);
+       assertEquals(calculatorUI.calculate(-10, 4, '%'), -2, 0.0001);
 
-        // Test5: Negative dividend and negative divisor (PWC)
-        assertEquals(-1, -5 % -2);
-        assertEquals(-2, -10 % -4);
+       // Test5: Negative dividend and negative divisor (PWC)
+       assertEquals(calculatorUI.calculate(-5, -2, '%'), -1, 0.0001);
+       assertEquals(calculatorUI.calculate(-10, -4, '%'), -2, 0.0001);
 
-        // Test6: Divisor greater than dividend (PWC)
-        assertEquals(5, 5 % 7);
-        assertEquals(-5, -5 % 7);
+       // Test6: Divisor greater than dividend (PWC)
+       assertEquals(calculatorUI.calculate(5, 7, '%'), 5, 0.0001);
+       assertEquals(calculatorUI.calculate(-5, 7, '%'), -5, 0.0001);
 
-        // Test7: Divisor of one (BCC)
-        assertEquals(0, 7 % 1);
-        assertEquals(0, -7 % 1);
+       // Test7: Divisor of one (BCC)
+       assertEquals(calculatorUI.calculate(7, 1, '%'), 0, 0.0001);
+       assertEquals(calculatorUI.calculate(-7, 1, '%'), 0, 0.0001);
 
-        // Test8: Divisor of negative one (BCC)
-        assertEquals(0, 7 % -1);
-        assertEquals(0, -7 % -1);
+       // Test8: Divisor of negative one (BCC)
+       assertEquals(calculatorUI.calculate(7, -1, '%'), 0, 0.0001);
+       assertEquals(calculatorUI.calculate(-7, -1, '%'), 0, 0.0001);
 
-        // Test9: Large dividend and small divisor (MBCC)
-        assertEquals(1, 21 % 2);
-        assertEquals(0, 20 % 2);
+       // Test9: Large dividend and small divisor (MBCC)
+       assertEquals(calculatorUI.calculate(21, 2, '%'), 1, 0.0001);
+       assertEquals(calculatorUI.calculate(20, 2, '%'), 0, 0.0001);
 
-        // Test10: Small dividend and large divisor (MBCC)
-        assertEquals(3, 3 % 50);
-        assertEquals(-3, -3 % 50);
+       // Test10: Small dividend and large divisor (MBCC)
+       assertEquals(calculatorUI.calculate(3, 50, '%'), 3, 0.0001);
+       assertEquals(calculatorUI.calculate(-3, 50, '%'), -3, 0.0001);
 
     }
 
