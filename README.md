@@ -472,6 +472,57 @@ To test that the calculator correctly compute the natural logarithm (ln) of a gi
   | **Test**            | **inputNumber** | **Expected result** |
 
 
+## % testModulo()
+
+## Overview
+This test suite evaluates the modulo (`%`) operation using **Pairwise Coverage (PWC)**. This test focuses on both **interface-based** and **function-based** characteristics of the modulo operation.
+
+## Testing Strategy
+
+### Interface-based Testing:
+- **Input Type**: Dividend and divisor are tested as either positive or negative integers.
+- **Relative Size**: Test cases where the divisor is larger or smaller than the dividend.
+
+### Function-based Testing:
+- **Special Conditions**: Handles dividend equal to divisor , even numbers.
+
+---
+
+## Input Domain Modelling
+
+### Interface-based Characteristics:
+
+| **Characteristic**       | **b1**: Positive Dividend, Positive Divisor | **b2**: Negative Dividend, Positive Divisor | **b3**: Positive Dividend, Negative Divisor | **b4**: Negative Dividend, Negative Divisor |
+|--------------------------|---------------------------------------------|---------------------------------------------|---------------------------------------------|---------------------------------------------|
+| Dividend and Divisor Sign | Both positive                               | Negative dividend, positive divisor         | Positive dividend, negative divisor         | Both negative                               |
+
+---
+
+### Function-based Characteristics:
+
+| **Characteristic**       | **b1**: Dividend = Divisor | **b2**: Dividend > Divisor, Both Positive | **b3**: Dividend > Divisor, Both Negative | **b4**: Even Numbers                        |
+|--------------------------|----------------------------|--------------------------------------------|--------------------------------------------|---------------------------------------------|
+| Result Behavior          | Should return `0`           | Positive remainder                         | Negative remainder                         | Checks for even number dividend and divisor |
+
+---
+
+## Test Cases
+
+| **Test Number** | **Input (Dividend, Divisor)** | **Expected Output** | **Explanation**                                                                 |
+|-----------------|-------------------------------|---------------------|---------------------------------------------------------------------------------|
+| 1               | `(3, 8)`                      | `3`                 | Positive dividend and positive divisor, divisor larger than dividend (b1)        |
+| 2               | `(-3, 8)`                     | `-3`                | Negative dividend, positive divisor, divisor larger than dividend (b2)           |
+| 3               | `(3, -8)`                     | `3`                 | Positive dividend, negative divisor, divisor larger than dividend (b3)           |
+| 4               | `(-3, -8)`                    | `-3`                | Negative dividend, negative divisor, divisor larger than dividend (b4)           |
+| 5               | `(4, 4)`                      | `0`                 | Dividend equals divisor, positive values (b1)                                    |
+| 6               | `(-4, -4)`                    | `0`                 | Dividend equals divisor, negative values (b2). Adjusted for `-0.0` case handling |
+| 7               | `(9, 4)`                      | `1`                 | Dividend greater than divisor, both positive (b2)                                |
+| 8               | `(-9, -4)`                    | `-1`                | Dividend greater than divisor, both negative (b3)                                |
+| 9               | `(-3, -7)`                    | `-3`                | Dividend less than divisor, both negative (b4)                                   |
+| 10              | `(10, 4)`                     | `2`                 | Positive dividend and positive divisor, both even numbers (b4)                   |
+
+
+
 ## ⬅️ testBackSpace()
 
 ### Goal of the test case:
