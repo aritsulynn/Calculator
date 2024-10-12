@@ -543,7 +543,7 @@ This test suite evaluates the modulo (`%`) operation using **Pairwise Coverage (
 
 ## Test Cases
 
-| **Test Number** | **Input (Dividend, Divisor)** | **Expected Output** |                                                            |
+| **Test Number** | **Input (Dividend, Divisor)** | **Expected Output** | 
 |-----------------|-------------------------------|---------------------|
 | 1               | `(3, 8)`                      | `3`                 | 
 | 2               | `(-3, 8)`                     | `-3`                | 
