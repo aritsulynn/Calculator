@@ -1,8 +1,4 @@
-# To EsanLamSing
-
-1. เริ่มทำครั้งแรกใช้ `git clone https://github.com/aritsulynn/Calculator.git` แทนของ original
-
-2. ครั้งต่อๆไป ก่อนเริ่มทำให้คลิกขวาที่ชื่อ `project > git > pull` มันจะได้ update project เป็นเวอร์ชั่นล่าสุด
+# 2024-ITCS473-EsanLamSing-Supreme
 
 # Calculator
 

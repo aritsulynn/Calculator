@@ -5,3 +5,5 @@ out/
 
 # Maven
 target/
+
+.DS_Store
